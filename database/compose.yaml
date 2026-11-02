@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: db-tasteVueling
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: mysql-tastevueling
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
