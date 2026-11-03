@@ -123,10 +123,10 @@ ALTER TABLE `oferta_producto` ADD FOREIGN KEY (`producto_id`) REFERENCES `produc
 
 ALTER TABLE `pedidos` ADD FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
-  ALTER TABLE `pedido_detalle` ADD FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`id`);
+ALTER TABLE `pedido_detalle` ADD FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`id`);
 
-  ALTER TABLE `pedido_detalle` ADD FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`);
+ALTER TABLE `pedido_detalle` ADD FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`);
 
-  ALTER TABLE `pedido_detalle_ingrediente` ADD FOREIGN KEY (`pedido_detalle_id`) REFERENCES `pedido_detalle` (`id`);
+ALTER TABLE `pedido_detalle_ingrediente` ADD FOREIGN KEY (`pedido_detalle_id`) REFERENCES `pedido_detalle` (`id`);
 
-  ALTER TABLE `pedido_detalle_ingrediente` ADD FOREIGN KEY (`ingrediente_id`) REFERENCES `ingredientes` (`id`);
+ALTER TABLE `pedido_detalle_ingrediente` ADD FOREIGN KEY (`ingrediente_id`) REFERENCES `ingredientes` (`id`);
