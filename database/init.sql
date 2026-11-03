@@ -1,10 +1,23 @@
-CREATE DATABASE IF NOT EXISTS mysql-tastevueling
+CREATE DATABASE IF NOT EXISTS `mysql-tastevueling`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE mysql-tastevueling;
+USE `mysql-tastevueling`;
 
-DROP TABLE IF EXISTS camisetas;
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS pedido_detalle_ingrediente;
+DROP TABLE IF EXISTS pedido_detalle;
+DROP TABLE IF EXISTS pedidos;
+DROP TABLE IF EXISTS oferta_producto;
+DROP TABLE IF EXISTS ofertas;
+DROP TABLE IF EXISTS producto_ingrediente;
+DROP TABLE IF EXISTS ingredientes;
+DROP TABLE IF EXISTS productos;
+DROP TABLE IF EXISTS categorias;
+DROP TABLE IF EXISTS usuarios;
+
+SET FOREIGN_KEY_CHECKS = 1;
 
 CREATE TABLE `usuarios` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
