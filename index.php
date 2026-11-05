@@ -6,8 +6,8 @@ function showError($code, $message)
     http_response_code($code);
     $errorCode = $code;
     $errorMessage = $message;
-    $view = "views/error.php";
-    include_once "views/main.php";
+    $view = "mvc/views/error.php";
+    include_once "mvc/views/main.php";
     exit;
 }
 
@@ -18,7 +18,9 @@ if (!isset($_GET['controller'])) {
 
 $controllerParam = $_GET['controller'];
 $nombre_controller = $controllerParam . "Controller";
-$controllerFile = "controllers/" . $nombre_controller . ".php";
+
+// 🔧 Ruta corregida para buscar dentro de la carpeta mvc/
+$controllerFile = "mvc/controllers/" . $nombre_controller . ".php";
 
 if (!file_exists($controllerFile)) {
     showError(404, "No existe el controller " . $nombre_controller);
