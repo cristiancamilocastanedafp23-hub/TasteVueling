@@ -1,4 +1,4 @@
 <?php
-define("url", "http://localhost/Daw2mvc/");
-define("default_controller", "producto");
+define("url", "http://localhost/TasteVueling/");
+define("default_controller", "carta");
 define("default_action", "index");
