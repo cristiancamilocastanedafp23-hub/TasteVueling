@@ -1,0 +1,69 @@
+/* CONTENEDOR PRINCIPAL */
+.menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+/* -- Contenedor de las Paginas principales -- */
+.navegacion-paginas{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+}
+
+/* Paginas */
+
+.paginas {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/* Texto del menú */
+
+.paginas a {
+    color: black;
+    font-family: 'VuelingPilcrow', Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/*-- Carrito e iniciar sesion --*/
+
+/*Contenedor general*/
+.iconos-header{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.contenedor-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+}
+
+/* Icono del carrito */
+.carrito {
+    width: 24px;
+    height: 24px;
+}
+
+.usuario{
+    width: 32px;
+    height: 32px;
+}

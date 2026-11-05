@@ -1,0 +1,33 @@
+/*-- TIPOGRAFIAS --*/
+
+@font-face {
+    font-family: 'VuelingPilcrow';
+    src: url('../fonts/vuelingpilcrow-semibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*CONTAINER-PRINCIPAL*/
+
+.contenedor {
+    width: 100%;    
+    padding: 0 90px;
+    box-sizing: border-box;
+}
