@@ -1,69 +1,63 @@
-/* CONTENEDOR PRINCIPAL */
-.menu {
+/* Contenedor principal */
+.menu-container{
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
 }
 
-/* -- Contenedor de las Paginas principales -- */
-.navegacion-paginas{
-    display: flex;
-    gap: 70px;
-    justify-content: center;
-}
-
-/* Paginas */
-
-.paginas {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-}
-
-/* Texto del menú */
-
-.paginas a {
-    color: black;
+/*Clase para la tipografia de la letra*/
+.texto{
     font-family: 'VuelingPilcrow', Arial, sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-/* Logo */
-.logo {
+/*Contenedor del logo*/
+.navbar-brand.logo{
+    margin-right: 0;
+}
+
+
+/* Tamaño del logo*/
+.img{
     width: 120px;
     height: auto;
 }
 
-/*-- Carrito e iniciar sesion --*/
-
-/*Contenedor general*/
-.iconos-header{
-    display: flex;
-    align-items: center;
-    gap: 24px;
+/*Container del menú*/
+.menu-container{
+    width: 100%;
 }
 
-.contenedor-carrito {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-
-}
-
-/* Icono del carrito */
-.carrito {
-    width: 24px;
-    height: 24px;
-}
-
-.usuario{
+/*Usuario icono*/
+.user-icon{
+    background-image: url('/TasteVueling/assets/icons/header/user.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 32px;
     height: 32px;
+}
+
+/*Carrito icono*/
+.carrito-icon{
+    background-image: url('/TasteVueling/assets/icons/header/carrito.svg');   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+/* =========================
+   MENÚ HAMBURGUESA
+========================= */
+
+/* RESPONSIVE - MENU MOVIL */
+@media (max-width: 991.98px) {
+
+    .menu-container {
+        display: none;
+    }
+
+    .navbar.contenedor {
+        display: flex;
+    }
+
 }
