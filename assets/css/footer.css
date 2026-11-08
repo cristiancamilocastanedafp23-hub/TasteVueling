@@ -1,0 +1,93 @@
+/* Clase general para el footer */
+.contenedor-footer {
+    width: 100%;    
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+footer{
+    font-family: 'VuelingPilcrow', Arial, sans-serif;
+}
+
+/*Tipografia SansPro*/
+.sansPro{
+    font-family: 'SourceSansPro', Arial, sans-serif;
+    font-size: 12px;
+}
+
+/*Clase del logo*/
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+/*Enlaces hacia otras paginas*/
+.paginasFooter{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/*Icono Twitter*/
+.x-icon{
+    background-image: url('/TasteVueling/assets/icons/footer/x.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+/*Icono Youtube*/
+.youtube-icon{
+    background-image: url('/TasteVueling/assets/icons/footer/youtube.svg');   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+/*Icono Instagram*/
+.instagram-icon{
+    background-image: url('/TasteVueling/assets/icons/footer/instagram.svg');   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+/*Icono Facebook*/
+.facebook-icon{
+    background-image: url('/TasteVueling/assets/icons/footer/facebook.svg');   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.apuntate{
+    display: inline-block;         
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border: 1.5px solid #ffffff;
+    border-radius: 50px;
+    padding: 5px 36px;
+}
+
+.apuntate:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.google-play {
+    width: 70px;
+}
+
+.app-store {
+    width: 85px;
+    height: auto;
+}

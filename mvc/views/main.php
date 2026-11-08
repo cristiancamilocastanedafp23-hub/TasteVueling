@@ -18,19 +18,25 @@
     <link rel="stylesheet" href="assets/css/global.css">
 
     <!-- CSS del Header -->
-    <link rel="stylesheet" href="assets/css/header.css?version=1.2">
+    <link rel="stylesheet" href="assets/css/header.css">
 
     <!-- CSS de la Carta -->
-    <link rel="stylesheet" href="assets/css/carta.css?version">
+    <link rel="stylesheet" href="assets/css/carta.css">
+
+    <!-- CSS del Footer -->
+    <link rel="stylesheet" href="assets/css/footer.css">
 
     
 </head>
 <body>
 
-    <!-- Carga segura del Header-->
+    <!-- Cargamos el Header-->
     <?php include_once __DIR__ . '/partials/header.php';?>
 
     <?php include_once $view ?>
+
+    <!-- Cargamos el Footer --> 
+    <?php include_once __DIR__ . '/partials/footer.php';?>
 
 </body>
 </html>
