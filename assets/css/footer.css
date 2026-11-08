@@ -26,6 +26,15 @@ footer{
     color: white;
     text-decoration: none;
     font-size: 13px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color 0.2s ease;
+}
+
+.paginasFooter:hover {
+    color: white;
+    border-bottom-color: #ffffff;
 }
 
 /*Icono Twitter*/

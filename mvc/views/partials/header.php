@@ -1,5 +1,5 @@
 <!--HEADER -->
-<nav class="navbar navbar-expand-lg border-bottom py-3 contenedor"> 
+<nav class="navbar navbar-expand-lg border-bottom py-2 contenedor"> 
     
     <!-- Menu escritorio -->
     <div class="row menu-container align-items-center d-none d-lg-flex">
