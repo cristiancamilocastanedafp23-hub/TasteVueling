@@ -6,7 +6,7 @@
     <title>Taste Vueling</title>
 
     <!-- Favicon --> 
-    <link rel="icon" type="image/jpeg" href="/assets/img/header/logoSinFondo.jpg">
+    <link rel="icon" href="assets/icons/favicon/plane.svg" type="image/svg+xml">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -33,7 +33,8 @@
     <!-- Cargamos el Header-->
     <?php include_once __DIR__ . '/partials/header.php';?>
 
-    <?php include_once $view ?>
+    <!-- Cargamos la variable view--> 
+    <?php include_once $view?>
 
     <!-- Cargamos el Footer --> 
     <?php include_once __DIR__ . '/partials/footer.php';?>
