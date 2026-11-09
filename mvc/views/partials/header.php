@@ -23,8 +23,8 @@
                 </ul>
 
                 <!-- Logo -->
-                <a class="navbar-brand logo" href="#">
-                    <img src="assets/img/header/logoSinFondo.jpg" class="img" alt="Logo del restaurante">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
                 </a>
 
                 <!-- Club y Alérgenos -->

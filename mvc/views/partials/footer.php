@@ -63,8 +63,8 @@
             <h6>LLÉVANOS EN TU MÓVIL</h6>
 
             <div class="d-flex gap-1 justify-content-center">
-                <img src="assets/img/footer/google-play.jpg" class="google-play">
-                <img src="assets/img/footer/app-store.jpg" class="app-store">
+                <img src="assets/img/footer/google-play.jpg" class="google-play" alt="Logo Google Play">
+                <img src="assets/img/footer/app-store.jpg" class="app-store" alt="Logo Apple Store">
             </div>
         </div>
 
