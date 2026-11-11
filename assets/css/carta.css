@@ -1,0 +1,118 @@
+/*-- TIPOGRAFIAS --*/
+.vueling{
+    font-family: 'VuelingPilcrow', 'Arial Narrow', sans-serif;
+    color: black;
+}
+
+.sansPro{
+    font-family: 'SourceSansPro', Arial, sans-serif;
+}
+
+/*Texto debajo del titulo principal*/
+.textoJustificado{
+    text-align: justify;
+}
+
+/*Boton de los filtros por continente*/
+.boton-continente {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    padding: 4px 40px;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.boton-continente:hover {
+    background-color: #DDDDDD;
+    color: black;
+}
+
+.margen{
+    margin-top: 72px;
+}
+
+/* Tarjeta principal */
+.tarjetas {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Imagen del plato */
+.imgPlatos {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de la tarjeta */
+.cuerpo-tarjeta {
+    padding: 12px;
+    justify-content: space-between;
+}
+
+/*Titulo de los platos*/
+.titulo-plato {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*Descripcion*/
+.descripcion {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555555;
+}
+
+/*Boton de añadir*/
+.botonProducto {
+    font-size: 11px;
+    font-weight: 700;
+    color: #000000;
+    background: transparent;
+    text-decoration: none;
+    padding: 6px 45px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botonProducto:hover {
+    background-color: #DDDDDD;
+    color: black;
+}
+
+/*Precio*/
+.precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+@media (max-width: 575.98px) {
+    .pie-tarjeta {
+        flex-direction: column-reverse; 
+        gap: 10px;                     
+        align-items: stretch;
+    }
+
+    .botonProducto {
+        width: 100%;                 
+        text-align: center;
+    }
+
+    .precio {
+        text-align: center;            
+    }
+}

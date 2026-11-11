@@ -1,30 +1,25 @@
 <?php
 
-class Producto
+abstract class Producto
 {
-    // Los nombres deben coincidir con las columnas de la tabla (camisetas)
+    // Los nombres deben coincidir con las columnas de la tabla (Productos)
     protected $id;
     protected $categoria_id;
     protected $nombre;
     protected $descripcion;
     protected $precio;
-    protected $tipo;
+    protected $tipo_id;
     protected $imagen;
     protected $activo;
 
-    // Creamos este atributo para que podamos obtener el nombre de la categoria 
-    // (en mi caso continente) del join
-    protected $categoria_nombre;
-
-    /**
+    /*
      * fetch_object() rellena las propiedades ANTES de llamar al constructor.
      * Por eso no hay que pisarlas con valores vacíos cuando se instancia sin argumentos.
-     */
+    */
 
     /* Constructor */
     public function __construct($id = null, $categoria_id = null, $nombre = null
-    , $descripcion = null, $precio = null, $tipo = null, $imagen = null, $activo = null, 
-    $categoria_nombre = null)
+    , $descripcion = null, $precio = null, $tipo_id = null, $imagen = null, $activo = null)
     {
         if ($id !== null){
             $this->id = $id;
@@ -41,18 +36,15 @@ class Producto
         if ($precio !== null) {
             $this->precio = $precio;
         }
-        if ($tipo !== null) {
-            $this->tipo = $tipo;
+        if ($tipo_id !== null) {
+            $this->tipo_id = $tipo_id;
         }
         if($imagen !== null){
             $this->imagen = $imagen;
         }
         if($activo !== null){
             $this->activo = $activo;
-        }
-        if($categoria_nombre !== null){
-            $this->categoria_nombre = $categoria_nombre;
-        }        
+        }   
     }
 
     //GETTERS Y SETTERS    
@@ -116,17 +108,19 @@ class Producto
         $this->precio = $precio;
         return $this;
     }
+
     //Tipo
-    public function getTipo()
+    public function getTipoId()
     {
-        return $this->tipo;
+        return $this->tipo_id;
     }
 
-    public function setTipo($tipo)
+    public function setTipoId($tipo_id)
     {
-        $this->tipo = $tipo;
+        $this->tipo_id = $tipo_id;
         return $this;
     }
+
     //Imagen
     public function getImagen()
     {
@@ -148,18 +142,6 @@ class Producto
     public function setActivo($activo)
     {
         $this->activo = $activo;
-        return $this;
-    }
-    
-    //Categoria Nombre
-    public function getCategoriaNombre()
-    {
-        return $this->categoria_nombre;
-    }
-
-    public function setCategoriaNombre($categoria_nombre)
-    {
-        $this->categoria_nombre = $categoria_nombre;
         return $this;
     }
 }
