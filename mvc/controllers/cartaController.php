@@ -1,7 +1,19 @@
 <?php
 
-//Incluimos el archivo DAO de los productos de la carta
-include_once("mvc/models/ProductoDAO.php");
+//Incluimos el archivo DAO de las categorias de la carta
+include_once("mvc/models/categorias/CategoriaDAO.php");
+
+//Incluimos el archivo Producto.php
+include_once("mvc/models/Producto.php");
+
+//Incluimos el archivo DAO de los platos de la carta
+include_once("mvc/models/platos/PlatoDAO.php");
+
+//Incluimos el archivo DAO de los postres de la carta
+include_once("mvc/models/postres/PostreDAO.php");
+
+//Incluimos el archivo DAO de los bebidas de la carta
+include_once("mvc/models/bebidas/BebidaDAO.php");
 
 //Creamos la clase del controller
 class cartaController
@@ -9,29 +21,29 @@ class cartaController
 
     public function index()
     {
-        //Definimos los productos previamente obtenidos en el DAO
-        $listaProductos = ProductoDAO::getAll();
+        //Obtenemos las categorias, en mi caso, son los continentes
+        $continentes = CategoriaDAO::getAll();
 
-        //Array para los productos
-        $cartaProductos = [];
+        //Obtenemos los platos
+        $platos = PlatoDAO::getAll();
 
-        //Array para las bebidas
-        $bebidas = [];
+        //Obtenemos los postres
+        $postres = PostreDAO::getAll();
 
-        //Bucle
-        foreach($listaProductos as $producto){
-            if($producto -> getTipo() === "bebida"){
-                $bebidas[] = $producto;
-            }else{
-                $continente = $producto-> getCategoriaNombre();
-                $tipo = $producto -> getTipo();
-                $cartaProductos[$continente][$tipo][] = $producto;
-            }
-        }
+        //Obtenemos las bebidas
+        $bebidas = BebidaDAO::getAll();
 
-        //Incluimos la vista
-        $view = "mvc/views/carta/index.php";
+        //Ahora en un array pondremos nuestros tipos en un array
+        $tipos = [
+    'Platos'  => $platos,
+    'Postres' => $postres,
+    'Bebidas' => $bebidas,
+];
+
+        //Definimos la variable con la ruta
+        $view = "mvc/views/carta/carta.php";
         
+        //La incluimos en el main.php
         include_once 'mvc/views/main.php';
     }
 

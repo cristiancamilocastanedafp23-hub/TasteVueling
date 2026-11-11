@@ -19,7 +19,7 @@ if (!isset($_GET['controller'])) {
 $controllerParam = $_GET['controller'];
 $nombre_controller = $controllerParam . "Controller";
 
-// 🔧 Ruta corregida para buscar dentro de la carpeta mvc/
+// Ruta corregida para buscar dentro de la carpeta mvc/
 $controllerFile = "mvc/controllers/" . $nombre_controller . ".php";
 
 if (!file_exists($controllerFile)) {
