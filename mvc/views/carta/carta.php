@@ -42,6 +42,7 @@
     <div class="margen mt-5 mb-5">
         <?php foreach ($continentes as $continente): ?>
 
+            <!-- Recorremos para enseñar todas las categorias -->
             <section class="seccion-continente mb-5" data-continente="<?= htmlspecialchars($continente->getNombre()) ?>">
                 <!-- Titulo continente -->
                 <div class="row mb-3">
@@ -50,24 +51,29 @@
                     </div>
                 </div>
 
+                <!-- Enseñamos todos los platos en fila -->
                 <div class="row g-4">
                     <?php foreach ($tipos as $nombreTipo => $productos): ?>
                         <?php foreach ($productos as $producto): ?>
                             <?php if ($producto->getCategoriaId() == $continente->getId()): ?>
-
+                                
+                                <!-- Enseñamos la tarjeta -->
                                 <div class="col-12 col-sm-6 col-lg-3">
                                     <div class="tarjetas d-flex flex-column">
+                                        <!-- Imagen -->
                                         <img src="assets/img/platos/<?= htmlspecialchars($producto->getImagen()) ?>"
                                             class="imgPlatos"
                                             alt="<?= htmlspecialchars($producto->getNombre()) ?>">
-
+                                        <!-- Nombre del plato -->
                                         <div class="cuerpo-tarjeta d-flex flex-column flex-grow-1 p-3">
                                             <h4 class="titulo-plato vueling">
                                                 <?= htmlspecialchars($producto->getNombre()) ?>
                                             </h4>
+                                        <!-- Descripcion -->
                                             <p class="descripcion textoJustificado">
                                                 <?= htmlspecialchars($producto->getDescripcion()) ?>
                                             </p>
+                                        <!-- Boton y precio --> 
                                             <div class="pie-tarjeta d-flex justify-content-between align-items-center mt-auto">
                                                 <button class="botonProducto">AÑADIR</button>
                                                 <h5 class="precio vueling mb-0"><?= htmlspecialchars($producto->getPrecio()) ?> €</h5>
