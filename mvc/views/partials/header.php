@@ -4,11 +4,8 @@
     <!-- Menu escritorio -->
     <div class="row menu-container align-items-center d-none d-lg-flex">
 
-        <!-- 3 columnas -->
-        <div class="col-md-3"> </div>
-
-        <!-- 6 columnas -->
-        <div class="col-md-6">
+        <!-- 3 columnas vacias y 6 columnas -->
+        <div class="col-md-6 offset-md-3">
             <div class="d-flex justify-content-between align-items-center gap-4">
 
                 <!-- Inicio y Carta -->
@@ -42,12 +39,8 @@
             
         </div>
 
-        <!-- 2 columnas -->
-        <div class="col-md-2"> </div>
-
-
-        <!-- 1 columna -->
-        <div class="col-md-1 d-flex gap-3">  
+        <!-- 2 columnas vacias y 1 columna -->
+        <div class="col-md-1 offset-md-2 d-flex gap-3">  
 
             <!-- User-->
             <div class="user-icon"></div>
@@ -59,10 +52,10 @@
     </div>
 
     <!-- MENU MOVIL -->
-    <div class="d-flex d-lg-none align-items-center justify-content-between w-100">
+    <div class="d-lg-none align-items-center justify-content-between w-100 px-3">
 
         <!-- Hamburguesa y logo -->
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center justify-content-between gap5">
 
             <!-- Hamburguesa -->
             <button class="navbar-toggler" type="button"
@@ -76,18 +69,19 @@
 
             <!-- Logo -->
             <a class="navbar-brand logo" href="#">
-                <img src="assets/img/header/logoSinFondo.jpg" class="img" alt="Logo del restaurante">
+                <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
             </a>
 
-        </div>
+            
+            <!-- Carrito -->
+            <div class="carrito-icon"></div>
 
-        <!-- Carrito -->
-        <div class="carrito-icon"></div>
+        </div>
 
     </div>
 
     <!-- MENU DESPLEGABLE MOVIL -->
-    <div class="collapse d-lg-none w-100" id="menuHamburguesa">
+    <div class="collapse d-lg-none w-100 px-3" id="menuHamburguesa">
 
         <ul class="navbar-nav texto py-3">
 

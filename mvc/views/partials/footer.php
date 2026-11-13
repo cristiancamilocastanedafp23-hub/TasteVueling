@@ -8,12 +8,9 @@
             <img src="assets/img/header/logosinBg.jpg" class="logo" alt="Logo del restaurante">
             <p>© 2026 Vueling Airlines SA</p>
         </div>
-        
-        <!-- 1 columna -->
-        <div class="col-md-1"> </div>
 
-       <!-- 2 columnas -->
-        <div class="col-md-2 d-flex justify-content-center align-items-center mt-2">
+       <!-- 1 columna vacia y 2 columnas -->
+        <div class="col-md-2 offset-md-1 d-flex justify-content-center align-items-center mt-2">
             <!-- EXPLORA -->
             <div class="text-center text-md-start">
                 <h6>EXPLORA</h6>
