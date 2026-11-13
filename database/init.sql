@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS ingredientes;
 DROP TABLE IF EXISTS productos;
 DROP TABLE IF EXISTS categorias;
 DROP TABLE IF EXISTS usuarios;
-
+DROP TABLE IF EXISTS 
 -- Volvemos a activar las tablas primarias
 SET FOREIGN_KEY_CHECKS = 1;
 
