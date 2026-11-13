@@ -63,12 +63,16 @@
 /* RESPONSIVE - MENU MOVIL */
 @media (max-width: 991.98px) {
 
+    /*Bloqueamos el menu de escritorio*/
     .menu-container {
         display: none;
     }
 
+    /*Indicamos que el contenedor pase a tener un padding a los lados de 16 px cada uno*/
     .navbar.contenedor {
         display: flex;
+        padding-left: 16px;
+        padding-right: 16px;
     }
-
 }
+
