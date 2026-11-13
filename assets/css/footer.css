@@ -77,6 +77,7 @@ footer{
     height: 32px;
 }
 
+/*Boton apuntate*/
 .apuntate{
     display: inline-block;         
     justify-content: center;
@@ -87,16 +88,61 @@ footer{
     padding: 5px 36px;
 }
 
+/*Hover del apuntate*/
 .apuntate:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
+/*Svg del google-play*/
 .google-play {
     width: 70px;
 }
 
+/*Svg del app-store*/
 .app-store {
     width: 85px;
     height: auto;
+}
+
+/*Modo responsive*/
+@media (max-width: 575.98px) {
+
+    .logo {
+        width: 170px;
+    }
+
+    .sansPro {
+        font-size: 16px;
+    }
+
+    .paginasFooter {
+        font-size: 20px;
+    }
+
+    footer h6 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .x-icon,
+    .youtube-icon,
+    .instagram-icon,
+    .facebook-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .apuntate {
+        font-size: 18px;
+        padding: 8px 44px;
+    }
+
+    .google-play {
+        width: 125px;
+    }
+
+    .app-store {
+        width: 148px;
+    }
 }
