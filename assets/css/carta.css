@@ -101,18 +101,47 @@
 }
 
 @media (max-width: 575.98px) {
+
+    .contenedor {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .contenedor h1 {
+        font-size: 45px;
+    }
+
+    .boton-continente{
+        padding: 8px 40px;
+        font-size: 15px;
+    }
+
+    .seccion-continente h2{
+        font-size: 35px;
+    }
+
+    .titulo-plato{
+        font-size: 23px;
+    }
+
+    .descripcion {
+        font-size: 18px;
+    }
+    
     .pie-tarjeta {
         flex-direction: column-reverse; 
         gap: 10px;                     
-        align-items: stretch;
     }
 
     .botonProducto {
-        width: 100%;                 
+        width: 100%;        
+        padding: 10px 45px;
+        font-size: 15px; 
         text-align: center;
     }
 
     .precio {
-        text-align: center;            
+        text-align: center;     
+        font-size: 21px;       
     }
 }
