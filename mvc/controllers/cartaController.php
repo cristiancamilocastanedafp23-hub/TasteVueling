@@ -24,6 +24,26 @@ class cartaController
         //Obtenemos las categorias, en mi caso, son los continentes
         $continentes = CategoriaDAO::getAll();
 
+        //Array vacio para luego colocoar continentes seleccionados
+        $continentesSelects = [];
+
+        //Variable de los continentes seleccionados
+        $continenteSelect = $_GET['continente'] ?? '';
+
+        //Bucle para añadir los continentes seleccionados
+        foreach ($continentes as $continente) {
+            if ($continente->getNombre() === $continenteSelect) {
+                $continentesSelects[] = $continente;
+            }
+        }
+
+        //Bucle si no selecciona ninguno
+        if(empty($continentesSelects)){
+            $continentesSelects = $continentes;
+        }
+
+        //PLATOS - BEBIDAS - POSTRES
+
         //Obtenemos los platos
         $platos = PlatoDAO::getAll();
 
@@ -35,10 +55,10 @@ class cartaController
 
         //Ahora en un array pondremos nuestros tipos en un array
         $tipos = [
-    'Platos'  => $platos,
-    'Postres' => $postres,
-    'Bebidas' => $bebidas,
-];
+            'Platos'  => $platos,
+            'Postres' => $postres,
+            'Bebidas' => $bebidas,
+        ];        
 
         //Definimos la variable con la ruta
         $view = "mvc/views/carta/carta.php";
