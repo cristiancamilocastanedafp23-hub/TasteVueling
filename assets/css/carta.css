@@ -28,10 +28,18 @@
     width: 100%;
 }
 
+/*Al pasar por encima del ratón*/
 .boton-continente:hover {
     background-color: #DDDDDD;
     color: black;
 }
+
+/*Al seleccionarlo*/
+.boton-continente.activo {
+    background-color: #DDDDDD;
+    color: #000000;
+}
+
 
 .margen{
     margin-top: 72px;
@@ -100,6 +108,7 @@
     color: #000000;
 }
 
+/*Vista responsive*/
 @media (max-width: 575.98px) {
 
     .contenedor {

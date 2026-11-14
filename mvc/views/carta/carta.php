@@ -26,24 +26,34 @@
 
     <!-- NAVEGACIÓN POR BOTONES EN LAS CATEGORIAS DE LOS CONTINENTES -->
     <div class="row g-2 g-md-3 mt-4 vueling">
-
-        <!--Botones -->
+        <!-- Bucle que recorre los continentes -->
         <?php foreach ($continentes as $continente): ?>
             <div class="col-12 col-md-auto">
-                <a href="#<?htmlspecialchars($continente->getNombre())?>" class="boton-continente">
-                    <?=htmlspecialchars($continente->getnombre())?>
-                </a>
+                <!-- Boton  seleccionado -->
+                <?php if ($continente->getNombre() === $continenteSelect): ?>
+
+                    <a href="<?= url ?>?controller=carta" class="boton-continente activo">
+                        <?= htmlspecialchars($continente->getNombre()) ?>
+                    </a>
+
+                <?php else: ?>
+
+                    <!-- Botones sin seleccionar -->
+                    <a href="<?= url ?>?controller=carta&continente=<?= $continente->getNombre() ?>" class="boton-continente">
+                        <?= htmlspecialchars($continente->getNombre()) ?>
+                    </a>
+                <?php endif; ?>
+
             </div>
         <?php endforeach; ?>
-
     </div> 
     
     <!-- SECCION DE PLATOS POR CONTINENTES -->
     <div class="margen mt-5 mb-5">
-        <?php foreach ($continentes as $continente): ?>
+        <?php foreach ($continentesSelects as $continente): ?>
 
             <!-- Recorremos para enseñar todas las categorias -->
-            <section class="seccion-continente mb-5" data-continente="<?= htmlspecialchars($continente->getNombre()) ?>">
+            <section class="seccion-continente mb-5">
                 <!-- Titulo continente -->
                 <div class="row mb-3">
                     <div class="col-12 vueling">
