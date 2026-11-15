@@ -1,17 +1,6 @@
-/*-- TIPOGRAFIAS --*/
-.vueling{
-    font-family: 'VuelingPilcrow', 'Arial Narrow', sans-serif;
-    color: black;
-}
-
-.sansPro{
-    font-family: 'SourceSansPro', Arial, sans-serif;
-}
-
-/*Texto debajo del titulo principal*/
-.textoJustificado{
-    text-align: justify;
-}
+/* =====================================
+   FILTROS POR CONTINENTE
+===================================== */
 
 /*Boton de los filtros por continente*/
 .boton-continente {
@@ -40,10 +29,9 @@
     color: #000000;
 }
 
-
-.margen{
-    margin-top: 72px;
-}
+/* =====================================
+   TARJETAS DE PRODUCTOS
+===================================== */
 
 /* Tarjeta principal */
 .tarjetas {
@@ -108,7 +96,10 @@
     color: #000000;
 }
 
-/*Vista responsive*/
+/* =====================================
+   RESPONSIVE - MÓVIL
+===================================== */
+
 @media (max-width: 575.98px) {
 
     .contenedor {

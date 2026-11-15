@@ -1,10 +1,10 @@
 <!-- FOOTER -->
-<footer class="contenedor bg-black text-white">
+<footer class="contenedor bg-black text-white vueling">
     
     <div class="row py-3 align-items-start">
                 
         <!-- 2 columnas Logo y Copyright-->
-        <div class="col-md-2 sansPro text-center">
+        <div class="col-md-2 sourceSans text-center copyright">
             <img src="assets/img/header/logosinBg.jpg" class="logo" alt="Logo del restaurante">
             <p>© 2026 Vueling Airlines SA</p>
         </div>

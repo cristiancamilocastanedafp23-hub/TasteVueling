@@ -1,25 +1,20 @@
-/* Clase general para el footer */
-.contenedor-footer {
-    width: 100%;    
-    padding: 0 60px;
-    box-sizing: border-box;
-}
-
-footer{
-    font-family: 'VuelingPilcrow', Arial, sans-serif;
-}
-
-/*Tipografia SansPro*/
-.sansPro{
-    font-family: 'SourceSansPro', Arial, sans-serif;
-    font-size: 12px;
-}
+/* =====================================
+   LOGO Y COPYRIGHT
+===================================== */
 
 /*Clase del logo*/
 .logo{
     width: 150px;
     height: auto;
 }
+
+.copyright{
+    font-size: 12px;
+}
+
+/* =====================================
+   ENLACES DEL FOOTER
+===================================== */
 
 /*Enlaces hacia otras paginas*/
 .paginasFooter{
@@ -36,6 +31,10 @@ footer{
     color: white;
     border-bottom-color: #ffffff;
 }
+
+/* =====================================
+   ICONOS REDES SOCIALES
+===================================== */
 
 /*Icono Twitter*/
 .x-icon{
@@ -77,6 +76,10 @@ footer{
     height: 32px;
 }
 
+/* =====================================
+   BOTÓN APÚNTATE
+===================================== */
+
 /*Boton apuntate*/
 .apuntate{
     display: inline-block;         
@@ -94,9 +97,14 @@ footer{
   color: #000000;
 }
 
+/* =====================================
+   APLICACIONES MÓVILES
+===================================== */
+
 /*Svg del google-play*/
 .google-play {
     width: 70px;
+    height: auto;
 }
 
 /*Svg del app-store*/
@@ -105,15 +113,13 @@ footer{
     height: auto;
 }
 
-/*Modo responsive*/
+/* =====================================
+   RESPONSIVE - MÓVIL
+===================================== */
 @media (max-width: 575.98px) {
 
     .logo {
         width: 170px;
-    }
-
-    .sansPro {
-        font-size: 16px;
     }
 
     .paginasFooter {

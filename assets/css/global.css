@@ -1,4 +1,4 @@
-/*-- TIPOGRAFIAS --*/
+/*-- IMORTACIÓN DE LAS TIPOGRAFIAS --*/
 
 @font-face {
     font-family: 'VuelingPilcrow';
@@ -25,9 +25,27 @@
 }
 
 /*CONTAINER-PRINCIPAL*/
-
 .contenedor {
     width: 100%;    
     padding: 0 90px;
     box-sizing: border-box;
+}
+
+/*CLASES PARA LAS TIPOGRAFÍAS*/
+.vueling{
+    font-family: 'VuelingPilcrow', Arial, sans-serif;
+}
+
+.sourceSans{
+    font-family: 'SourceSansPro', Arial, sans-serif;
+}
+
+/*TEXTO JUSTIFICADO*/
+.textoJustificado {
+    text-align: justify;
+}
+
+/*MARGEN 72*/
+.margen{
+    margin-top: 72px;
 }

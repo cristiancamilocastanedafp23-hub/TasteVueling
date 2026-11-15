@@ -1,29 +1,30 @@
+/* =====================================
+   CONTENEDOR DEL MENÚ
+===================================== */
+
 /* Contenedor principal */
 .menu-container{
     width: 100%;
 }
 
-/*Clase para la tipografia de la letra*/
-.texto{
-    font-family: 'VuelingPilcrow', Arial, sans-serif;
-}
+/* =====================================
+   ENLACES DEL MENÚ
+===================================== */
 
 /* Linea negra para los enlaces del menú */
-.texto .nav-link {
+.navbar .nav-link {
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   transition: border-color 0.2s ease;
 }
 
-.texto .nav-link:hover {
+.navbar .nav-link:hover {
   border-bottom-color: #000000;
 }
 
-/*Contenedor del logo*/
-.navbar-brand.logo{
-    margin-right: 0;
-}
-
+/* =====================================
+   LOGO
+===================================== */
 
 /* Tamaño del logo*/
 .img-logo{
@@ -31,11 +32,9 @@
     height: auto;
 }
 
-/*Container del menú*/
-.menu-container{
-    width: 100%;
-}
-
+/* =====================================
+   ICONOS
+===================================== */
 /*Usuario icono*/
 .user-icon{
     background-image: url('/TasteVueling/assets/icons/header/user.svg');
@@ -62,11 +61,6 @@
 
 /* RESPONSIVE - MENU MOVIL */
 @media (max-width: 991.98px) {
-
-    /*Bloqueamos el menu de escritorio*/
-    .menu-container {
-        display: none;
-    }
 
     /*Indicamos que el contenedor pase a tener un padding a los lados de 16 px cada uno*/
     .navbar.contenedor {
