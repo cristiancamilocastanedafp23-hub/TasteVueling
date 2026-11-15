@@ -80,7 +80,7 @@
                                                 <?= htmlspecialchars($producto->getNombre()) ?>
                                             </h4>
                                         <!-- Descripcion -->
-                                            <p class="descripcion textoJustificado">
+                                            <p class="descripcion sourceSans textoJustificado">
                                                 <?= htmlspecialchars($producto->getDescripcion()) ?>
                                             </p>
                                         <!-- Boton y precio --> 
