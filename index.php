@@ -1,4 +1,5 @@
 <?php
+//Incluimos el fichero de configuración con los parámetros
 include_once("config/parameters.php");
 
 function showError($code, $message)
@@ -11,6 +12,7 @@ function showError($code, $message)
     exit;
 }
 
+//Redirige al controller por defecto
 if (!isset($_GET['controller'])) {
     header("Location: " . url . "?controller=" . default_controller);
     exit;
