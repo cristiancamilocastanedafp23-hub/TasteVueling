@@ -1,10 +1,14 @@
 <?php
 
+//Creamos la clase controller del home
 class homeController
 {
     public function index()
     {
-        $view = "mvc/views/home/index.php";
+        //Definimos la variable con la ruta
+        $view = "mvc/views/home/home.php";
+
+        //La incluimos en el main.php
         include_once "mvc/views/main.php";
     }
 }

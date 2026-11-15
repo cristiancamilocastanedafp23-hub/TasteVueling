@@ -20,13 +20,15 @@
     <!-- CSS del Header -->
     <link rel="stylesheet" href="assets/css/header.css">
 
+    <!-- CSS de la Home -->
+    <link rel="stylesheet" href="assets/css/home.css">
+
     <!-- CSS de la Carta -->
     <link rel="stylesheet" href="assets/css/carta.css">
 
     <!-- CSS del Footer -->
     <link rel="stylesheet" href="assets/css/footer.css">
 
-    
 </head>
 <body>
 
