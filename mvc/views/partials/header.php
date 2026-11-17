@@ -1,5 +1,5 @@
 <!--HEADER -->
-<nav class="navbar navbar-expand-lg border-bottom py-2 contenedor"> 
+<nav class="navbar navbar-expand-lg border-bottom py-2 contenedor menu-<?= $_GET['controller'] ?>"> 
     
     <!-- Menu escritorio -->
     <div class="row menu-container align-items-center d-none d-lg-flex">
@@ -11,27 +11,27 @@
                 <!-- Inicio y Carta -->
                 <ul class="navbar-nav d-flex gap-5 align-items-center vueling">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark"> INICIO </a>
+                        <a href="<?php echo url . "?controller=home" ?>" class="nav-link text-dark"> INICIO </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark"> CARTA </a>
+                        <a href="<?php echo url . "?controller=carta" ?>" class="nav-link text-dark"> CARTA </a>
                     </li>
                 </ul>
 
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?php echo url . "?controller=home"?>">
                     <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
                 </a>
 
                 <!-- Club y Alérgenos -->
                 <ul class="navbar-nav d-flex gap-5 align-items-center vueling">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark"> CLUB </a>
+                        <a href="<?php echo url . "?controller=home#club"?>" class="nav-link text-dark"> CLUB </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-dark"> ALÉRGENOS </a>
+                        <a href="<?php echo url . "?controller=home#alergenos"?>" class="nav-link text-dark"> ALÉRGENOS </a>
                     </li>
                 </ul>
 
@@ -65,7 +65,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand logo" href="#">
+        <a class="navbar-brand logo" href="<?php echo url . "?controller=home" ?>">
             <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
         </a>
 
@@ -84,19 +84,19 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark">INICIO</a>
+                <a href="<?php echo url . "?controller=home"?>" class="nav-link text-dark">INICIO</a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark">CARTA</a>
+                <a href="<?php echo url . "?controller=carta"?>" class="nav-link text-dark">CARTA</a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark">CLUB</a>
+                <a href="<?php echo url . "?controller=home#club"?>" class="nav-link text-dark">CLUB</a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark">ALÉRGENOS</a>
+                <a href="<?php echo url . "?controller=home#alergenos"?>" class="nav-link text-dark">ALÉRGENOS</a>
             </li>
 
         </ul>

@@ -6,6 +6,8 @@ class Categoria {
     protected $id;
     protected $nombre;
     protected $descripcion;
+    protected $precio;
+    protected $imagen;
     protected $activa;
 
     /*
@@ -14,9 +16,9 @@ class Categoria {
     */
 
     /* Constructor */
-    public function __construct($id = null, $nombre = null, $descripcion = null, $activa = null)
+    public function __construct($id = null, $nombre = null, $descripcion = null, $precio = null, $imagen = null, $activa = null)
     {
-        if ($id !== null){
+        if ($id !== null) {
             $this->id = $id;
         }
         if ($nombre !== null) {
@@ -25,9 +27,15 @@ class Categoria {
         if ($descripcion !== null) {
             $this->descripcion = $descripcion;
         }
-        if($activa !== null){
+        if ($precio !== null) {
+            $this->precio = $precio;
+        }
+        if ($imagen !== null) {
+            $this->imagen = $imagen;
+        }
+        if ($activa !== null) {
             $this->activa = $activa;
-        }   
+        }
     }
 
     /*Id*/
@@ -41,7 +49,7 @@ class Categoria {
         $this->id = $id;
         return $this;
     }
-        
+
     /*Nombre*/
     public function getNombre()
     {
@@ -63,6 +71,30 @@ class Categoria {
     public function setDescripcion($descripcion)
     {
         $this->descripcion = $descripcion;
+        return $this;
+    }
+
+    /*Precio*/
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+        return $this;
+    }
+
+    /*Imagen*/
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
         return $this;
     }
 
