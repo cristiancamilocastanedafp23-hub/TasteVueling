@@ -1,5 +1,5 @@
 <!--HEADER -->
-<nav class="navbar navbar-expand-lg border-bottom py-2 contenedor menu-<?= $_GET['controller'] ?>"> 
+<nav class="navbar navbar-expand-lg contenedor menu-<?= $_GET['controller'] ?>"> 
     
     <!-- Menu escritorio -->
     <div class="row menu-container align-items-center d-none d-lg-flex">
@@ -21,7 +21,8 @@
 
                 <!-- Logo -->
                 <a class="navbar-brand" href="<?php echo url . "?controller=home"?>">
-                    <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
+                    <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante">
+                    <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante">
                 </a>
 
                 <!-- Club y Alérgenos -->
@@ -66,7 +67,8 @@
 
         <!-- Logo -->
         <a class="navbar-brand logo" href="<?php echo url . "?controller=home" ?>">
-            <img src="assets/img/header/logoSinFondo.jpg" class="img-logo" alt="Logo del restaurante">
+            <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante">
+            <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante">
         </a>
 
         <!-- Carrito -->
