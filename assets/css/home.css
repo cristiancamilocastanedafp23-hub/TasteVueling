@@ -7,7 +7,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     align-items: center;
     display: flex;
 }
@@ -137,6 +137,7 @@
 .club{
     position: relative;
     display: inline-block;
+    scroll-margin-top: 100px;
 }
 
 /*Foto*/
@@ -165,9 +166,11 @@
 /* =====================================
    SECCION ALÉRGENOS (3)
 ===================================== */
+
 /*Background alérgenos*/
 #alergenos {
     background-color: #F7F7F7; 
+    scroll-margin-top: 100px;
 }
 
 /*Iconos*/
@@ -214,6 +217,8 @@
     .banner {
         min-height: 70vh; 
         background-position: 22% center; 
+        padding-top: 80px;
+        padding-bottom: 20px;
     }
 
     .botonBanner{

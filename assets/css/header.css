@@ -32,6 +32,12 @@
     height: auto;
 }
 
+/*Eliminamos margen del logo*/
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* =====================================
    ICONOS
 ===================================== */
@@ -71,3 +77,82 @@
     }
 }
 
+/* =========================
+   MENÚ SCROLL
+========================= */
+
+.navbar.contenedor {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.logo-negro {
+    display: inline-block;
+}
+
+.logo-blanco {
+    display: none;
+}
+
+/* Menu transparente en home */
+.navbar.contenedor.menu-home {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.menu-home .logo-negro {
+    display: none;
+}
+
+.menu-home .logo-blanco {
+    display: inline-block;
+}
+
+.menu-home .nav-link {
+    color: #ffffff !important;
+}
+
+.menu-home .nav-link:hover {
+    border-bottom-color: #ffffff;
+}
+
+.menu-home .user-icon,
+.menu-home .carrito-icon,
+.menu-home .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.navbar.contenedor.menu-home.scrolled {
+    background-color: #ffffff;
+    border-bottom-color: #dee2e6;
+}
+
+.menu-home.scrolled .logo-negro {
+    display: inline-block;
+}
+
+.menu-home.scrolled .logo-blanco {
+    display: none;
+}
+
+.menu-home.scrolled .nav-link {
+    color: #000000 !important;
+}
+
+.menu-home.scrolled .nav-link:hover {
+    border-bottom-color: #000000;
+}
+
+.menu-home.scrolled .user-icon,
+.menu-home.scrolled .carrito-icon,
+.menu-home.scrolled .navbar-toggler-icon {
+    filter: none;
+}

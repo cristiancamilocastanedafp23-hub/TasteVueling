@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/global.css">
 
     <!-- CSS del Header -->
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/header.css?version">
 
     <!-- CSS de la Home -->
     <link rel="stylesheet" href="assets/css/home.css">
@@ -28,6 +28,9 @@
 
     <!-- CSS del Footer -->
     <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- JavaScript del header-->
+    <script src="assets/js/header.js"></script>
 
 </head>
 <body>

@@ -5,7 +5,7 @@
                 
         <!-- 2 columnas Logo y Copyright-->
         <div class="col-md-2 sourceSans text-center copyright">
-            <img src="assets/img/header/logosinBg.jpg" class="logo" alt="Logo del restaurante">
+            <img src="assets/img/header/logosinBg.webp" class="logo" alt="Logo del restaurante">
             <p>© 2026 Vueling Airlines SA</p>
         </div>
 
@@ -60,8 +60,8 @@
             <h6>LLÉVANOS EN TU MÓVIL</h6>
 
             <div class="d-flex gap-1 justify-content-center">
-                <img src="assets/img/footer/google-play.jpg" class="google-play" alt="Logo Google Play">
-                <img src="assets/img/footer/app-store.jpg" class="app-store" alt="Logo Apple Store">
+                <img src="assets/img/footer/google-play.webp" class="google-play" alt="Logo Google Play">
+                <img src="assets/img/footer/app-store.webp" class="app-store" alt="Logo Apple Store">
             </div>
         </div>
 
