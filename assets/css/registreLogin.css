@@ -1,0 +1,58 @@
+/*Contenedor principal*/
+.contenedor-loginRegistro {
+    --bs-offcanvas-width: 540px;
+    padding: 0px;
+    color: #222222;
+}
+
+/*Aplicamos padding al body para que la linea del header pueda llegar al final
+en ambos lado*/
+.contenedor-loginRegistro .offcanvas-body {
+    padding: 32px;
+}
+
+/*Label de los inputs*/
+.labelInput{
+    border-color: #666666;
+    height: 48px;
+}
+
+/*Al clicar*/
+.labelInput:focus {
+    border-color: #000000;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+/*Placeholder*/
+.labelInput::placeholder{
+    color: #666666;
+}
+
+/*Boton de acceder*/
+.botonRL {
+    background-color: #FFF000;
+    color: black;
+    border: none;
+    border-radius: 90px;
+    padding: 14px 60px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+/*Hover del boton*/
+.botonRL:hover {
+    background-color: #FFF66B;
+}
+
+/*Link*/
+.link {
+    font-size: 16px;
+    color: #037A92;
+    text-decoration: underline;
+}
+
+/*Link del boton*/
+.link:hover{
+    color: #0E4747;
+}

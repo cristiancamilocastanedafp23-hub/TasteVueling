@@ -1,3 +1,6 @@
+<?php include_once 'mvc/views/registreLogin/login.php'; ?>
+<?php include_once 'mvc/views/registreLogin/registre.php'; ?>
+
 <!--HEADER -->
 <nav class="navbar navbar-expand-lg contenedor menu-<?= $_GET['controller'] ?>"> 
     
@@ -44,7 +47,7 @@
         <div class="col-md-1 offset-md-2 d-flex gap-3">  
 
             <!-- User-->
-            <div class="user-icon"></div>
+            <div class="user-icon" role="button" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel"></div> 
             <!--Carrito  --> 
             <div class="carrito-icon"></div>
             
@@ -82,7 +85,7 @@
         <ul class="navbar-nav vueling py-3">
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark">INICIAR SESIÓN</a>
+                <a href="#" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel">INICIAR SESIÓN</a>
             </li>
 
             <li class="nav-item">
@@ -106,4 +109,3 @@
     </div>
 
 </nav>
-

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuMovil = document.getElementById("menuHamburguesa");
 
     function actualizarMenu() {
-        // Calcula el final del banner menos la altura del menú; si no hay banner, usa 50px
         const limiteScroll = banner ? (banner.offsetHeight - navbar.offsetHeight) : 50;
 
         if (window.scrollY >= limiteScroll) {
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // En móvil: si despliegan el menú arriba del todo, lo pone blanco para que se lean los enlaces
     if (menuMovil) {
         menuMovil.addEventListener("show.bs.collapse", function () {
             navbar.classList.add("scrolled");

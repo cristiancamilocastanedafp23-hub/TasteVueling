@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="assets/css/global.css">
 
     <!-- CSS del Header -->
-    <link rel="stylesheet" href="assets/css/header.css?version">
+    <link rel="stylesheet" href="assets/css/header.css">
+
+    <!-- CSS del Registro y el Login -->
+    <link rel="stylesheet" href="assets/css/registreLogin.css">
 
     <!-- CSS de la Home -->
     <link rel="stylesheet" href="assets/css/home.css">
@@ -31,6 +34,9 @@
 
     <!-- JavaScript del header-->
     <script src="assets/js/header.js"></script>
+
+    <!-- JavaScript del fallo del header--> 
+    <script src="assets/js/errorLogin.js"></script>
 
 </head>
 <body>
