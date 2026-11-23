@@ -1,5 +1,6 @@
 <?php
-
+// Indicamos que sea abstract ya que las clases heredaran
+// de esta clase
 abstract class Producto
 {
     // Los nombres deben coincidir con las columnas de la tabla (Productos)
@@ -47,9 +48,9 @@ abstract class Producto
         }   
     }
 
-    //GETTERS Y SETTERS    
+    // GETTERS Y SETTERS    
 
-    //Id
+    // Id
     public function getId()
     {
         return $this->id;
@@ -61,7 +62,7 @@ abstract class Producto
         return $this;
     }
 
-    //Categoria_id
+    // Categoria_id
     public function getCategoriaId()
     {
         return $this->categoria_id;
@@ -73,7 +74,7 @@ abstract class Producto
         return $this;
     }
 
-    //Nombre
+    // Nombre
     public function getNombre()
     {
         return $this->nombre;
@@ -85,7 +86,7 @@ abstract class Producto
         return $this;
     }
 
-    //Descripcion
+    // Descripcion
     public function getDescripcion()
     {
         return $this->descripcion;
@@ -97,7 +98,7 @@ abstract class Producto
         return $this;
     }
 
-    //Precio
+    // Precio
     public function getPrecio()
     {
         return $this->precio;
@@ -109,7 +110,7 @@ abstract class Producto
         return $this;
     }
 
-    //Tipo
+    // Tipo
     public function getTipoId()
     {
         return $this->tipo_id;
@@ -121,7 +122,7 @@ abstract class Producto
         return $this;
     }
 
-    //Imagen
+    // Imagen
     public function getImagen()
     {
         return $this->imagen;
@@ -133,7 +134,7 @@ abstract class Producto
         return $this;
     }
 
-    //Activo
+    // Activo
     public function getActivo()
     {
         return $this->activo;

@@ -5,67 +5,66 @@ include_once("config/dataBase.php");
 // Incluimos la clase Plato
 include_once __DIR__ . '/Plato.php';
 
-//Creamos el DAO de plato
+// Creamos el DAO de plato
 class PlatoDAO {
 
-    //Funcion que recupera todos los platos
+    // Funcion que recupera todos los platos
     public static function getAll()
     {
-        //Abrimos conexión
+        // Abrimos conexión
         $conexion = DataBase::connect();
 
-        //Definimos consulta
+        // Definimos consulta
         $statement = $conexion->prepare("SELECT * FROM productos WHERE tipo_id = 1");
 
-        //Ejecutamos consulta
+        // Ejecutamos consulta
         $statement->execute();
 
-        //Obtenemos resultado
+        // Obtenemos resultado
         $resultado = $statement->get_result();
 
-        //Creamos un array para guardar posteriormente los resultados
+        // Creamos un array para guardar posteriormente los resultados
         $productos = [];
 
-        //Guardamos lo que la consulta obtenga en el array
+        // Guardamos lo que la consulta obtenga en el array
         while ($producto = $resultado->fetch_object("Plato")) {
             $productos[] = $producto;
         }
 
-        //Cerramos la consulta
+        // Cerramos la consulta
         $statement->close();
 
-        //Cerramos conexión
+        // Cerramos conexión
         $conexion->close();
 
-        //Devolvemos el array
+        // Devolvemos el array
         return $productos;
     }
 
-    //Funcion que recupera el plato por el ID
+    // Funcion que recupera el plato por el ID
     public static function getId($id) 
     {
-        //Abrimos conexión
+        // Abrimos conexión
         $conexion = DataBase::connect();
 
-        //Preparamos consulta
+        // Preparamos consulta
         $statement = $conexion->prepare("SELECT * FROM productos WHERE id = ? AND tipo_id = 1");
         $statement->bind_param("i", $id);
 
-        //Ejecutamos consulta
+        // Ejecutamos consulta
         $statement->execute();
 
-        //Obtenemos resultado
+        // Obtenemos resultado
         $resultado = $statement->get_result();
-        
         $plato = $resultado->fetch_object("Plato");
 
-        //Cerramos la consulta
+        // Cerramos la consulta
         $statement->close();
 
-        //Cerramos conexión
+        // Cerramos conexión
         $conexion->close();
 
-        //Devolvemos el plato
+        // Devolvemos el plato
         return $plato;
     }
 

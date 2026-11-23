@@ -32,10 +32,13 @@
 }
 
 /*CLASES PARA LAS TIPOGRAFÍAS*/
+
+/*Tipografia vueling*/
 .vueling{
     font-family: 'VuelingPilcrow', Arial, sans-serif;
 }
 
+/*Tipografia SansPro*/
 .sourceSans{
     font-family: 'SourceSansPro', Arial, sans-serif;
 }
@@ -45,7 +48,7 @@
     text-align: justify;
 }
 
-/*MARGEN 72*/
+/*MARGEN 72PX ARRIBA Y ABAJO*/
 .margen{
     margin-top: 72px;
     margin-bottom: 72px;

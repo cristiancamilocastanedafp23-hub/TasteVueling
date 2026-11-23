@@ -29,40 +29,40 @@ class cartaController
         // Variable del continente seleccionado
         $continenteSelect = $_GET['continente'] ?? '';
 
-        //Bucle y condicional para añadir el continente seleccionado
+        // Bucle y condicional para añadir el continente seleccionado
         foreach ($continentes as $continente) {
             if ($continente->getNombre() === $continenteSelect) {
                 $continentesSelects[] = $continente;
             }
         }
 
-        //Condicional si no selecciona ninguno
+        // Condicional si no selecciona ninguno
         if(empty($continentesSelects)){
             $continentesSelects = $continentes;
         }
 
-        //PLATOS - BEBIDAS - POSTRES
+        // PLATOS - BEBIDAS - POSTRES
 
-        //Obtenemos los platos
+        // Obtenemos los platos
         $platos = PlatoDAO::getAll();
 
-        //Obtenemos los postres
+        // Obtenemos los postres
         $postres = PostreDAO::getAll();
 
-        //Obtenemos las bebidas
+        // Obtenemos las bebidas
         $bebidas = BebidaDAO::getAll();
 
-        //Ahora en un array pondremos nuestros tipos en un array
+        // Ahora en un array pondremos nuestros tipos en un array
         $tipos = [
             'Platos'  => $platos,
             'Postres' => $postres,
             'Bebidas' => $bebidas,
         ];        
 
-        //Definimos la variable con la ruta
+        // Definimos la variable con la ruta
         $view = "mvc/views/carta/carta.php";
         
-        //La incluimos en el main.php
+        // La incluimos en el main.php
         include_once 'mvc/views/main.php';
     }
 

@@ -1,5 +1,6 @@
 <?php 
-
+// Creamos la clase categoria, pero en este caso no es
+// abstract ya que ninguna clase más heredará
 class Ingrediente_Producto {
 
     // Los nombres deben coincidir con las columnas de la tabla (producto_ingrediente)
@@ -8,7 +9,7 @@ class Ingrediente_Producto {
     protected $tipo;
     protected $cantidad;
 
-    //Para realizar el join y sacar estas dos atributos
+    // Para realizar el join y sacar estas dos atributos
     protected $nombre;
     protected $precio_extra;
     protected $alergenos;

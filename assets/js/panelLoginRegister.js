@@ -1,3 +1,9 @@
+// CÓDIGO GENERADO POR IA
+// Para esta animación también me he ayudado de la IA, donde
+// he mostrado el mensaje de error en caso de que no 
+// se logue bien o el registro mal, o se registre correctamente
+// Como es animacion no considero que no afecta en mi aprendizaje
+
 document.addEventListener("DOMContentLoaded", function () {
     const loginPanelEl = document.getElementById('loginPanel');
 
