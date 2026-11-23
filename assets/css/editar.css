@@ -1,0 +1,100 @@
+/* =====================================
+   IMAGEN
+===================================== */
+.imagenEditar{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* =====================================
+   TARJETAS DE LOS INGREDIENTES BASE
+   Y ALÉRGENOS
+===================================== */
+
+/*Tarjeta alérgenos*/
+.tarjetaBaseAlergenos{
+    border: 1px solid #339CFF ;
+    border-left: 12px solid #339CFF;
+    border-radius: 10px;
+}
+
+/*Icono información*/
+.info-icon{
+    background-image: url('/TasteVueling/assets/icons/editar/info.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+/*Icono de alerta*/
+.alert-icon{
+    background-image: url('/TasteVueling/assets/icons/editar/alert.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+/*Texto ingredientes base*/
+.textoBase{
+    color: #666666;
+    margin-left: 45px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =====================================
+    PERSONALIZACIÓN DEL PLATO
+===================================== */
+
+/*Clase que lleva la lista de ingredientes*/
+.ingredientes {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #DDDDDD;
+    cursor: pointer;
+}
+
+/*Clase que separa el check del nombre*/
+.ingredienteCheck {
+    display: flex;
+    gap: 12px;
+}
+
+/* Checkbox redondeado */
+.ingredientes input[type="checkbox"] {
+    accent-color: black;
+    cursor: pointer;
+}
+
+.masRosa{
+    color: #FA4179;
+}
+
+.precioExtra {
+    font-weight: bold;
+}
+
+/*BOTON AÑADIR*/
+
+/* Botón añadir al carrito (amarillo) */
+.botonAnadir {
+    width: 100%;
+    background-color: #FFF000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botonAnadir:hover {
+    background-color: #FFF66B;
+}

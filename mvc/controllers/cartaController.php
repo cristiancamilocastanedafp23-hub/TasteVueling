@@ -1,43 +1,42 @@
 <?php
 
-//Incluimos el archivo DAO de las categorias de la carta
+// Incluimos el archivo DAO de las categorias de la carta
 include_once("mvc/models/categorias/CategoriaDAO.php");
 
-//Incluimos el archivo Producto.php
-include_once("mvc/models/Producto.php");
-
-//Incluimos el archivo DAO de los platos de la carta
+// Incluimos el archivo DAO de los platos de la carta
 include_once("mvc/models/platos/PlatoDAO.php");
 
-//Incluimos el archivo DAO de los postres de la carta
+// Incluimos el archivo DAO de los postres de la carta
 include_once("mvc/models/postres/PostreDAO.php");
 
-//Incluimos el archivo DAO de los bebidas de la carta
+// Incluimos el archivo DAO de los bebidas de la carta
 include_once("mvc/models/bebidas/BebidaDAO.php");
 
-//Creamos la clase del controller
+// Creamos la clase controller de carta
 class cartaController
 {
 
     public function index()
     {
-        //Obtenemos las categorias, en mi caso, son los continentes
+        // Obtenemos las categorias, en mi caso, son los continentes
         $continentes = CategoriaDAO::getAll();
 
-        //Array vacio para luego colocoar continentes seleccionados
+        // Array vacio para luego colocar el continente seleccionado
+        // o que añada todos los continentes disponibles si no se selecciona
+        // ninguno
         $continentesSelects = [];
 
-        //Variable de los continentes seleccionados
+        // Variable del continente seleccionado
         $continenteSelect = $_GET['continente'] ?? '';
 
-        //Bucle para añadir los continentes seleccionados
+        //Bucle y condicional para añadir el continente seleccionado
         foreach ($continentes as $continente) {
             if ($continente->getNombre() === $continenteSelect) {
                 $continentesSelects[] = $continente;
             }
         }
 
-        //Bucle si no selecciona ninguno
+        //Condicional si no selecciona ninguno
         if(empty($continentesSelects)){
             $continentesSelects = $continentes;
         }

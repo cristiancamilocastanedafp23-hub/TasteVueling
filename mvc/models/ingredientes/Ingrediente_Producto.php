@@ -1,12 +1,17 @@
 <?php 
 
-class ProductoIngrediente {
+class Ingrediente_Producto {
 
     // Los nombres deben coincidir con las columnas de la tabla (producto_ingrediente)
     protected $producto_id;
     protected $ingrediente_id;
     protected $tipo;
     protected $cantidad;
+
+    //Para realizar el join y sacar estas dos atributos
+    protected $nombre;
+    protected $precio_extra;
+    protected $alergenos;
 
     /*
     - fetch_object() rellena las propiedades ANTES de llamar al constructor.
@@ -76,5 +81,23 @@ class ProductoIngrediente {
     {
         $this->cantidad = $cantidad;
         return $this;
+    }
+
+    /*Nombre*/
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /*Precio extra*/
+    public function getPrecioExtra()
+    {
+        return $this->precio_extra;
+    }
+
+    /*Alergenos*/
+    public function getAlergenos()
+    {
+        return $this->alergenos;
     }
 }

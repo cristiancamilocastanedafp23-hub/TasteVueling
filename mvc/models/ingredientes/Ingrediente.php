@@ -1,11 +1,12 @@
 <?php 
 
-class Ingredientes {
+class Ingrediente {
 
     // Los nombres deben coincidir con las columnas de la tabla (ingredientes)
     protected $id;
     protected $nombre;
     protected $precio_extra;
+    protected $alergenos;
     protected $activo;
 
     /*
@@ -14,7 +15,7 @@ class Ingredientes {
     */
 
     /* Constructor */
-    public function __construct($id = null, $nombre = null, $precio_extra = null, $activo = null)
+    public function __construct($id = null, $nombre = null, $precio_extra = null, $alergenos = null, $activo = null)
     {
         if ($id !== null) {
             $this->id = $id;
@@ -24,6 +25,9 @@ class Ingredientes {
         }
         if ($precio_extra !== null) {
             $this->precio_extra = $precio_extra;
+        }
+        if ($alergenos !== null) {
+            $this->alergenos = $alergenos;
         }
         if ($activo !== null) {
             $this->activo = $activo;
@@ -63,6 +67,18 @@ class Ingredientes {
     public function setPrecioExtra($precio_extra)
     {
         $this->precio_extra = $precio_extra;
+        return $this;
+    }
+
+    /*Precio Extra*/
+    public function getAlergenos()
+    {
+        return $this->alergenos;
+    }
+
+    public function setAlergenos($alergenos)
+    {
+        $this->alergenos = $alergenos;
         return $this;
     }
 

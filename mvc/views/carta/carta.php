@@ -32,7 +32,7 @@
                 <!-- Boton  seleccionado -->
                 <?php if ($continente->getNombre() === $continenteSelect): ?>
 
-                    <a href="<?= url ?>?controller=carta" class="boton-continente activo">
+                    <a href="<?= url ?>?controller=carta&continente=<?= $continente->getNombre() ?>" class="boton-continente activo">
                         <?= htmlspecialchars($continente->getNombre()) ?>
                     </a>
 
@@ -49,7 +49,7 @@
     </div> 
     
     <!-- SECCION DE PLATOS POR CONTINENTES -->
-    <div class="margen mt-5 mb-5">
+    <div class="margen">
         <?php foreach ($continentesSelects as $continente): ?>
 
             <!-- Recorremos para enseñar todas las categorias -->
@@ -85,7 +85,19 @@
                                             </p>
                                         <!-- Boton y precio --> 
                                             <div class="pie-tarjeta d-flex justify-content-between align-items-center mt-auto">
-                                                <button class="botonProducto">AÑADIR</button>
+
+                                                <!-- Condicional sobre si el producto es un plato, postre o bebida -->
+                                                <?php if ($producto->getTipoId() == 1 || $producto-> getTipoId() == 2): ?>
+                                                    <a class="botonProducto"
+                                                        href="<?= url ?>?controller=producto&action=detalle&id=<?= $producto->getId() ?>&tipo=<?= $producto->getTipoId() ?>">
+                                                        AÑADIR
+                                                    </a>
+
+                                                <?php else: ?>
+                                                    <!-- Bebidas -->
+                                                    <button class="botonProducto">AÑADIR</button>
+                                                <?php endif; ?>
+
                                                 <h5 class="precio vueling mb-0"><?= htmlspecialchars($producto->getPrecio()) ?> €</h5>
                                             </div>
                                         </div>

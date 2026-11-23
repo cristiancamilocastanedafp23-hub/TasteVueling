@@ -2,9 +2,10 @@
 // Incluimos el archivo de configuracion de la BBDD
 include_once("config/dataBase.php");
 
-//Incluimos la clase Padre
+//Incluimos la clase Categoria
 include_once __DIR__ . '/Categoria.php';
 
+//Creamos el DAO de categoria
 class CategoriaDAO {
 
     //Funcion de obtener todos
@@ -40,17 +41,17 @@ class CategoriaDAO {
         return $categorias;
     }
 
-    //Funcion de obtener por el nombre
-    public static function getNombre()
+    //Funcion de obtener el nombre por ID
+    public static function getNombreById($id)
     {
         //Abrimos conexión
         $conexion = DataBase::connect();
 
         //Definimos consulta
-        $statement = $conexion->prepare("SELECT nombre FROM categorias WHERE nombre = ?");
+        $statement = $conexion->prepare("SELECT nombre FROM categorias WHERE id = ?");
 
         //Rellenamos la consulta
-        $statement -> bind_param("s",$nombre);
+        $statement -> bind_param("i",$id);
 
         //Ejecutamos consulta
         $statement->execute();
@@ -59,7 +60,7 @@ class CategoriaDAO {
         $resultado = $statement->get_result();
 
         //Hacemos fetch
-        $categoria = $resultado->fetch_object("Categoria");
+        $nombreCategoria = $resultado->fetch_object("Categoria");
 
         //Cerramos la consulta
         $statement->close();
@@ -67,6 +68,6 @@ class CategoriaDAO {
         //Cerramos conexión
         $conexion->close();
 
-        return $categoria;
+        return $nombreCategoria -> getNombre();
     }
 }
