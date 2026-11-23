@@ -1,8 +1,8 @@
 /* =====================================
-   FILTROS POR CONTINENTE
+   FILTRAR POR CONTINENTE
 ===================================== */
 
-/*Boton de los filtros por continente*/
+/*Boton del filtraje por continente*/
 .boton-continente {
     font-size: 14px;
     color: #000000;
@@ -30,7 +30,8 @@
 }
 
 /* =====================================
-   TARJETAS DE PRODUCTOS
+   TARJETAS DE LOS PRODUCTOS DE LA
+   CARTA
 ===================================== */
 
 /* Tarjeta principal */
@@ -84,6 +85,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/*Al pasar por encima con el ratón*/
 .botonProducto:hover {
     background-color: #DDDDDD;
     color: black;
@@ -102,37 +104,51 @@
 
 @media (max-width: 575.98px) {
 
+    /*Contenedor principal*/
     .contenedor {
         padding-left: 32px;
         padding-right: 32px;
     }
 
+    /*Titulo "Nuestra Carta"*/
     .contenedor h1 {
         font-size: 45px;
     }
 
+    /*Botón para filtrar por el continente*/
     .boton-continente{
         padding: 8px 40px;
         font-size: 15px;
     }
 
+    /*Titulo del continente*/
     .seccion-continente h2{
         font-size: 35px;
     }
 
+    /*Titulo del plato */
     .titulo-plato{
         font-size: 23px;
     }
 
+    /*Descripcion del plato */
     .descripcion {
         font-size: 18px;
     }
-    
+
+    /*Pie de la tarjeta: Precio y Añadir*/
     .pie-tarjeta {
         flex-direction: column-reverse; 
         gap: 10px;                     
     }
 
+    /*Precio*/
+    .precio {
+        text-align: center;     
+        font-size: 21px;       
+    }
+
+    /*Boton de añadir el producto*/
     .botonProducto {
         width: 100%;        
         padding: 10px 45px;
@@ -140,8 +156,4 @@
         text-align: center;
     }
 
-    .precio {
-        text-align: center;     
-        font-size: 21px;       
-    }
 }

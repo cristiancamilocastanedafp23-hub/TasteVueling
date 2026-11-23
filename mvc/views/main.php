@@ -35,19 +35,19 @@
     <!-- CSS del Footer -->
     <link rel="stylesheet" href="assets/css/footer.css">
 
-    <!-- JavaScript del header-->
+    <!-- JavaScript del header -->
     <script src="assets/js/header.js"></script>
 
-    <!-- JavaScript del fallo del header--> 
-    <script src="assets/js/errorLogin.js"></script>
+    <!-- JavaScript del fallo del header --> 
+    <script src="assets/js/panelLoginRegister.js"></script>
 
 </head>
 <body>
 
-    <!-- Cargamos el Header-->
+    <!-- Cargamos el Header -->
     <?php include_once __DIR__ . '/partials/header.php';?>
 
-    <!-- Cargamos la variable view--> 
+    <!-- Cargamos la variable view --> 
     <?php include_once $view?>
 
     <!-- Cargamos el Footer --> 

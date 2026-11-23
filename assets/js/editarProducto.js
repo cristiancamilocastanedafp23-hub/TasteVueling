@@ -1,4 +1,4 @@
-//Funcion para rec
+//Funcion 
 function recalcularSubtotalProducto(cb, precioExtraSeleccionado){
     const boton = document.querySelector("#botonAnadir");
     textoBotonAnadir=boton.textContent;

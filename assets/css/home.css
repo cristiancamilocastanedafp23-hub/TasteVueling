@@ -1,6 +1,7 @@
 /* =====================================
    AJUSTES PRINCIPALES DEL BANNER
 ===================================== */
+/*Foto del banner*/
 .banner {
     background-image: url(../img/home/banner.webp);
     background-size: cover;
@@ -28,7 +29,7 @@
     color: black;
 }
 
-/*Boton*/
+/*Boton "Exploremos" */
 .botonBanner{
     display: inline-block;
     background-color: #FFF000;
@@ -81,7 +82,7 @@
     color: #555555;
 }
 
-/*Boton de añadir*/
+/*Boton de ir al continente*/
 .botonContinente {
     font-size: 13px;
     font-weight: 700;
@@ -96,6 +97,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/*Boton al pasar con el ratón por encima*/
 .botonContinente:hover {
     background-color: #DDDDDD;
     color: black;
@@ -111,6 +113,7 @@
 /* =====================================
    SECCION CLUB (2)
 ===================================== */
+
 /*Titulo*/
 .tituloClub{
     transform: rotate(-8deg);       
@@ -140,7 +143,7 @@
     scroll-margin-top: 100px;
 }
 
-/*Foto*/
+/*Foto del club de puntos*/
 .fotoClub{
     width: 100%;
     height: auto;
@@ -173,7 +176,7 @@
     scroll-margin-top: 100px;
 }
 
-/*Iconos*/
+/*Icono chef*/
 .chef-icon{
     background-image: url('/TasteVueling/assets/icons/home/chefHat.svg');
     background-repeat: no-repeat;
@@ -184,6 +187,7 @@
     margin-bottom: 10px;
 }
 
+/*Icono teléfono*/
 .phone-icon{
     background-image: url('/TasteVueling/assets/icons/home/phone.svg');
     background-repeat: no-repeat;
@@ -194,6 +198,7 @@
     margin-bottom: 10px;
 }
 
+/*Icono certificado*/
 .certificado-icon{
     background-image: url('/TasteVueling/assets/icons/home/certificado.svg');
     background-repeat: no-repeat;
@@ -204,16 +209,17 @@
     margin-bottom: 10px;
 }
 
-/*Texto explicación*/
+/*Texto explicación de los alérgenos*/
 .textoAlergenos{
     color: #666666;
     font-weight: bold;
 }
 
 /* =====================================
-   RESPONSIVE
+   RESPONSIVE - MOVIL
 ===================================== */
 @media (max-width: 768px) {
+    /*Foto del banner*/
     .banner {
         min-height: 70vh; 
         background-position: 22% center; 
@@ -221,21 +227,23 @@
         padding-bottom: 20px;
     }
 
+    /*Boton del banner "Exploremos" */
     .botonBanner{
         width: 100%;
         text-align: center;
         font-size: 20px;
     }
 
+    /*Titulo del club*/
+    .tituloClub{
+        transform: rotate(0deg);       
+    }   
+
+    /*Boton club*/
     .botonClub{
         width: 100%;
         text-align: center;
         font-size: 20px;
         margin-bottom: 48px;
     }
-
-    .tituloClub{
-        transform: rotate(0deg);       
-    }   
-
 }

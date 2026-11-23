@@ -1,27 +1,30 @@
-<!-- FOOTER -->
+<!-- VISTA DEL FOOTER -->
+
+<!-- -- Contendor principal del footer -- -->
 <footer class="contenedor bg-black text-white vueling">
     
+    <!-- Fila que engloba todo el footer-->
     <div class="row py-3 align-items-start">
                 
-        <!-- 2 columnas Logo y Copyright-->
+        <!-- 2 columnas: Logo y Copyright-->
         <div class="col-md-2 sourceSans text-center copyright">
-            <img src="assets/img/header/logosinBg.webp" class="logo" alt="Logo del restaurante">
+            <img src="assets/img/header/logoBlanco.webp" class="logo" alt="Logo del restaurante">
             <p>© 2026 Vueling Airlines SA</p>
         </div>
 
-       <!-- 1 columna vacia y 2 columnas -->
+       <!-- 1 columna vacia y 2 columnas: Inicio y Carta -->
         <div class="col-md-2 offset-md-1 d-flex justify-content-center align-items-center mt-2">
             <!-- EXPLORA -->
             <div class="text-center text-md-start">
                 <h6>EXPLORA</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="paginasFooter">Inicio</a></li>
-                    <li><a href="#" class="paginasFooter">Carta</a></li>
+                    <li><a href="<?php echo url . "?controller=home"?>" class="paginasFooter">Inicio</a></li>
+                    <li><a href="<?php echo url . "?controller=carta"?>" class="paginasFooter">Carta</a></li>
                 </ul>
             </div>
         </div>
 
-       <!-- 2 columnas -->
+       <!-- 2 columnas: Ayuda -->
         <div class="col-md-2 d-flex justify-content-center align-items-center mt-2">
 
             <!-- AYUDA -->
@@ -34,7 +37,7 @@
             </div>
         </div>
 
-        <!-- 3 columnas Redes sociales-->
+        <!-- 3 columnas: Redes sociales-->
         <div class="col-md-3 text-center text-md-start mt-2 mb-3">  
             <h6>SÍGUENOS</h6>
             <div class="d-flex gap-2 align-items-center justify-content-center justify-content-md-start">
@@ -45,7 +48,7 @@
             </div>
         </div>
 
-        <!-- 2 columnas Promociones -->
+        <!-- 2 columnas: Promociones -->
         <div class="col-md-2 mt-2 flex-column align-items-center text-center gap-2"> 
 
             <!-- Apuntate -->
@@ -66,5 +69,4 @@
         </div>
 
     </div>
-
 </footer>

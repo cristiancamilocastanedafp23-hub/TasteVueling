@@ -1,6 +1,7 @@
-<!-- BANNER -->
+<!-- VISTA DE LA HOME -->
 <div class="banner">
-    <!-- Envolvemos en el contenedor -->
+
+    <!-- -- Contenedor principal de la web -- -->
     <div class="contenedor">
 
         <!-- Titulo principal -->
@@ -31,6 +32,7 @@
 
 <!-- SECCION 1 -->
 <section class="margen py-5">
+    <!-- -- Contenedor principal de la sección-- -->
 
     <div class="contenedor">
 
@@ -39,7 +41,7 @@
             <h1>SABOREA A TRAVÉS DEL MUNDO</h1>
         </div>    
 
-        <!-- Tarjetas -->
+        <!-- Tarjetas de las categorias -->
         <div class="row g-4 mt-4">
             <!-- Bucle para recorrer los continentes -->
             <?php foreach ($continentes as $continente) :?>
@@ -52,6 +54,7 @@
                             alt="<?= htmlspecialchars($continente->getNombre()) ?>"
                         >
 
+                        <!-- Tarjeta -->
                         <div class="cuerpo-tarjeta d-flex flex-column flex-grow-1">
 
                             <!-- Nombre del continente -->
@@ -63,10 +66,10 @@
                             <!-- Precio -->
                             <h5 class="precio vueling"> Desde  <?= htmlspecialchars($continente->getPrecio()) ?> €</h5>
 
-                            <!-- Boton de añadir a la carta-->
+                            <!-- Boton de añadir a la carta -->
                             <a href="<?= url ?>?controller=carta&continente=<?= $continente->getNombre() ?>"
                                 class="botonContinente">
-                                    IR A <?=  htmlspecialchars( $continente ->getNombre()) ?>
+                                    IR A <?=  htmlspecialchars($continente->getNombre()) ?>
                             </a>
 
                         </div>
@@ -116,7 +119,7 @@
 </section>
 
 <!-- SECCIÓN 3 -->
-<section id="alergenos" class="margen py-5">
+<section id="alergenos" class="py-5">
 
     <div class="contenedor">
 

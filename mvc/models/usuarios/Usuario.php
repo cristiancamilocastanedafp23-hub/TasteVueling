@@ -1,8 +1,9 @@
 <?php
-
+// Creamos la clase usuario, pero en este caso no es
+// abstract ya que ninguna clase más heredará
 class Usuario
 {
-    // Los nombres deben coincidir con las columnas de la tabla (usuarios)
+    //  Los nombres deben coincidir con las columnas de la tabla (usuarios)
     protected $id;
     protected $nombre;
     protected $email;
@@ -51,9 +52,9 @@ class Usuario
         }
     }
 
-    //GETTERS Y SETTERS    
+    // GETTERS Y SETTERS    
 
-    //Id
+    // Id
     public function getId()
     {
         return $this->id;
@@ -65,7 +66,7 @@ class Usuario
         return $this;
     }
 
-    //Nombre
+    // Nombre
     public function getNombre()
     {
         return $this->nombre;
@@ -77,7 +78,7 @@ class Usuario
         return $this;
     }
 
-    //Email
+    // Email
     public function getEmail()
     {
         return $this->email;
@@ -89,7 +90,7 @@ class Usuario
         return $this;
     }
 
-    //Password
+    // Password
     public function getPassword()
     {
         return $this->password;
@@ -101,7 +102,7 @@ class Usuario
         return $this;
     }
 
-    //Telefono
+    // Teléfono
     public function getTelefono()
     {
         return $this->telefono;
@@ -113,7 +114,7 @@ class Usuario
         return $this;
     }
 
-    //Direccion
+    // Direccion
     public function getDireccion()
     {
         return $this->direccion;
@@ -125,7 +126,7 @@ class Usuario
         return $this;
     }
 
-    //Fecha_nacimiento
+    // Fecha_nacimiento
     public function getFechaNacimiento()
     {
         return $this->fecha_nacimiento;
@@ -137,7 +138,7 @@ class Usuario
         return $this;
     }
 
-    //Rol
+    // Rol
     public function getRol()
     {
         return $this->rol;
@@ -149,7 +150,7 @@ class Usuario
         return $this;
     }
 
-    //Fecha_registro
+    // Fecha_registro
     public function getFechaRegistro()
     {
         return $this->fecha_registro;

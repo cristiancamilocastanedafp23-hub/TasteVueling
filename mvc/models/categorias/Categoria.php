@@ -1,5 +1,6 @@
 <?php 
-
+// Creamos la clase categoria, pero en este caso no es
+// abstract ya que ninguna clase más heredará
 class Categoria {
 
     // Los nombres deben coincidir con las columnas de la tabla (Categorias)

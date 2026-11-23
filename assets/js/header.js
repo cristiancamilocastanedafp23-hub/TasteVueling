@@ -1,3 +1,9 @@
+// CÓDIGO GENERADO POR IA
+// Para esta animación la IA me ha generado el código para
+// que detecte cuando se está scrolleando y el menú pueda aplicar el cambio de estilos
+// no lo he realizado yo, ya que no lo sabia hacer y como es una animación considero que no
+// afecta mucho en mi aprendizaje, además que es para la parte de usuario
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar.contenedor");
     const banner = document.querySelector(".banner");

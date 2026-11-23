@@ -1,5 +1,6 @@
-<!-- VISTA CARTA -->
+<!-- VISTA DE LA CARTA -->
 
+<!-- -- Contenedor principal de la vista -- -->
 <div class="contenedor">
 
     <!-- TITULO CARTA-->
@@ -24,9 +25,9 @@
         </div>
     </div>
 
-    <!-- NAVEGACIÓN POR BOTONES EN LAS CATEGORIAS DE LOS CONTINENTES -->
+    <!-- BOTONES PARA FILTRAR POR CONTINENTE -->
     <div class="row g-2 g-md-3 mt-4 vueling">
-        <!-- Bucle que recorre los continentes -->
+        <!-- Bucle que recorre los continentes para mostrar todos los botones -->
         <?php foreach ($continentes as $continente): ?>
             <div class="col-12 col-md-auto">
                 <!-- Boton  seleccionado -->
@@ -87,7 +88,7 @@
                                             <div class="pie-tarjeta d-flex justify-content-between align-items-center mt-auto">
 
                                                 <!-- Condicional sobre si el producto es un plato, postre o bebida -->
-                                                <?php if ($producto->getTipoId() == 1 || $producto-> getTipoId() == 2): ?>
+                                                <?php if ($producto->getTipoId() == 1 || $producto->getTipoId() == 2): ?>
                                                     <a class="botonProducto"
                                                         href="<?= url ?>?controller=producto&action=detalle&id=<?= $producto->getId() ?>&tipo=<?= $producto->getTipoId() ?>">
                                                         AÑADIR

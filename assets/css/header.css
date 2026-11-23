@@ -26,7 +26,7 @@
    LOGO
 ===================================== */
 
-/* Tamaño del logo*/
+/* Tamaño del logo */
 .img-logo{
     width: 120px;
     height: auto;
@@ -79,9 +79,13 @@
 }
 
 /* =========================
-   MENÚ SCROLL
+   MENÚ SCROLL -> Generado con IA
 ========================= */
-
+/*Para esta parte del menú de navegación la IA me ha realizado el código de estilos
+para que al hacer scroll deje de ser transparente y los elementos cambien de colores*/
+/*Todo el código de arriba si es realizado por mi, pero esta parte no la he hecho ya
+que habia partes que si sabia hacer como fijar el menu pero que cambie de colores no
+Como es solo para una animacion que no afecta al proyecto en magnitud la he usado*/
 .navbar.contenedor {
     position: sticky;
     top: 0;
@@ -101,7 +105,6 @@
     display: none;
 }
 
-/* Menu transparente en home */
 .navbar.contenedor.menu-home {
     position: fixed;
     width: 100%;

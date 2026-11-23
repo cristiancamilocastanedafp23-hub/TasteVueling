@@ -1,18 +1,18 @@
 <?php
 
-//Incluimos el archivo DAO de las categorias
+// Incluimos el archivo DAO de las categorias
 include_once("mvc/models/categorias/CategoriaDAO.php");
 
-//Incluimos el archivo DAO de los platos de la carta
+// Incluimos el archivo DAO de los platos de la carta
 include_once("mvc/models/platos/PlatoDAO.php");
 
-//Incluimos el archivo DAO de los postres de la carta
+// Incluimos el archivo DAO de los postres de la carta
 include_once("mvc/models/postres/PostreDAO.php");
 
-//Incluimos el archivo DAO de los bebidas de la carta
+// Incluimos el archivo DAO de los bebidas de la carta
 include_once("mvc/models/bebidas/BebidaDAO.php");
 
-//Incluimos el archivo DAO de los ingredientes de los productos
+// Incluimos el archivo DAO de los ingredientes de los productos
 include_once("mvc/models/ingredientes/Ingrediente_ProductoDAO.php");
 
 // Creamos la clase controller de producto
@@ -56,6 +56,7 @@ class productoController
         $ingredientesBase = [];
         $alergenos = [];
 
+        // Bucle para recorrer los ingredientes
         foreach ($ingredientes as $ingrediente) {
             // Guardamos el nombre de los ingredientes base
             if ($ingrediente->getTipo() === "base") {
