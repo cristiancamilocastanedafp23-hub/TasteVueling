@@ -1,35 +1,25 @@
 <!-- VISTA DETALLE DEL PRODUCTO -->
 <div class="contenedor margen">
+    
+    <div class="row gx-5">
+        <!-- ================= COLUMNA IZQUIERDA ================= -->
+        <div class="col-12 col-lg-6">
 
-    <!-- Títulos -->
-    <div class="row">
-        
             <!-- Titulo del plato-->
-        <div class="col-12 col-lg-6 text-center">
             <h2 class="vueling">
                 <?= htmlspecialchars($producto->getNombre()) ?>
             </h2>
-
-        </div>
-
-        <!-- Personaliza -->
-        <div class="col-12 col-lg-6">
-            <h2 class="vueling">
-                PERSONALIZA TU VIAJE POR <?= htmlspecialchars($nombreCategoria) ?>
-            </h2>
-        </div>
         
-    </div>
-    
-    <div class="row">
+            <!-- Descripcion -->
+            <div class="descripcionEditar sourceSans">
+                <p><?= htmlspecialchars($producto->getDescripcion()) ?></p>
+            </div>
 
-        <!-- ================= COLUMNA IZQUIERDA ================= -->
-        <div class="col-12 col-lg-6">
             <!-- Imagen -->
             <div class="mt-4">
                 <img src="assets/img/platos/<?= htmlspecialchars($producto->getImagen()) ?>"
-                     class="imagenEditar"
-                     alt="<?= htmlspecialchars($producto->getNombre()) ?>">
+                    class="imagenEditar"
+                    alt="<?= htmlspecialchars($producto->getNombre()) ?>">
             </div>
 
             <!-- Ingredientes base -->
@@ -65,7 +55,13 @@
         </div>
 
         <!-- ================= COLUMNA DERECHA ================= -->
-        <div class="col-12 col-lg-6 mt-4">
+        <div class="col-12 col-lg-6">
+            
+            <!-- Personaliza -->
+            <h2 class="vueling">
+                PERSONALIZA TU VIAJE POR <?= htmlspecialchars($nombreCategoria) ?>
+            </h2>
+
             <!-- Formulario -->
             <form method="POST" action="<?= url ?>?controller=producto&action=detalle&id=<?= $producto->getId() ?>&tipo=<?= $producto->getTipoId() ?>">
                 <!-- Bucle para recorrer todos los ingredientes -->
@@ -80,7 +76,7 @@
                             <!-- Check del ingrediente -->
                             <span class="ingredienteCheck">
                                 <input type="checkbox" onclick="recalcularSubtotalProducto(this, <?= $ingrediente->getPrecioExtra()?>)"
-                                    name="ingredientes[] "
+                                    name="ingredientes[]"
                                     value="<?= $ingrediente->getIngredienteId() ?>"
                                     <?= in_array($ingrediente->getIngredienteId(), $marcados) && $ingrediente->getTipo() === 'incluido' ? 'checked' : '' ?>
                                 >
@@ -96,7 +92,7 @@
 
                                 <span class="precioExtra"> 
                                     <span class="masRosa">+</span>
-                                    <?= $ingrediente->getPrecioExtra() ?> €
+                                    <?= number_format((float)$ingrediente->getPrecioExtra(), 2, ',', '.') ?> €
                                 </span>
 
                             <?php endif; ?>

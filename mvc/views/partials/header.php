@@ -25,8 +25,8 @@
 
                 <!-- Logo -->
                 <a class="navbar-brand" href="<?php echo url . "?controller=home"?>">
-                    <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante">
-                    <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante">
+                    <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante con letras negras">
+                    <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante colocado con letras blancas">
                 </a>
 
                 <!-- Club y Alérgenos -->
@@ -97,8 +97,8 @@
 
         <!-- Logo -->
         <a class="navbar-brand logo" href="<?php echo url . "?controller=home" ?>">
-            <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante">
-            <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante">
+            <img src="assets/img/header/logoNegro.webp" class="img-logo logo-negro" alt="Logo del restaurante con letras negras">
+            <img src="assets/img/header/logoBlanco.webp" class="img-logo logo-blanco" alt="Logo del restaurante con letras blancas">
         </a>
 
         <!-- Carrito -->

@@ -18,8 +18,13 @@
   transition: border-color 0.2s ease;
 }
 
+/*Al pasar por encima con el ratón*/
 .navbar .nav-link:hover {
   border-bottom-color: #000000;
+}
+
+.navbar .nav-link.active {
+    border-bottom-color: black;
 }
 
 /* =====================================
@@ -187,4 +192,12 @@ Como es solo para una animacion que no afecta al proyecto en magnitud la he usad
 .menu-home.scrolled .usuario-nombre:hover,
 .menu-home.scrolled .usuario-nombre:focus {
     color: #000000;
+}
+
+.menu-home .nav-link.active {
+    border-bottom-color: #ffffff;
+}
+
+.menu-home.scrolled .nav-link.active {
+    border-bottom-color: #000000;
 }

@@ -1,5 +1,5 @@
 <!-- VISTA DE LA CARTA -->
-
+ 
 <!-- -- Contenedor principal de la vista -- -->
 <div class="contenedor">
 
@@ -99,7 +99,7 @@
                                                     <button class="botonProducto">AÑADIR</button>
                                                 <?php endif; ?>
 
-                                                <h5 class="precio vueling mb-0"><?= htmlspecialchars($producto->getPrecio()) ?> €</h5>
+                                                <h5 class="precio vueling mb-0"><?= number_format((float)$producto->getPrecio(), 2, ',', '.') ?> €</h5>
                                             </div>
                                         </div>
                                     </div>

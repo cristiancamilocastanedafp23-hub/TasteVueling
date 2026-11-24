@@ -30,18 +30,21 @@
     <link rel="stylesheet" href="assets/css/carta.css">
 
     <!-- CSS de editar -->
-    <link rel="stylesheet" href="assets/css/editar.css?version=1.0">
+    <link rel="stylesheet" href="assets/css/editar.css">
 
     <!-- CSS del Footer -->
     <link rel="stylesheet" href="assets/css/footer.css">
 
-    <!-- JavaScript del header -->
+    <!-- JavaScript del scroll del header -->
     <script src="assets/js/header.js"></script>
 
-    <!-- JavaScript del fallo del header --> 
+    <!-- JavaScript de la página activa del header -->
+    <script src="assets/js/menu.js"></script>
+
+    <!-- JavaScript del fallo del registro o login --> 
     <script src="assets/js/panelLoginRegister.js"></script>
 
-    <!-- JavaScript para cambiar el precio al añadir  --> 
+    <!-- JavaScript para cambiar el precio al añadir --> 
     <script src="assets/js/editarProducto.js"></script>
 
 </head>
