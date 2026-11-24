@@ -103,7 +103,7 @@
                 <!-- Contenedor -->
                 <div class="club">
                     <!-- Foto avion -->
-                    <img src="assets/img/home/club.webp" class="fotoClub" alt="TasteVueling Club">
+                    <img src="assets/img/home/club.webp" class="fotoClub" alt="Avión promocional de TasteVueling Club">
                     
                     <!-- Estamos de estreno -->
                     <div class="estreno sourceSans">
@@ -135,21 +135,21 @@
 
             <!-- CHEFS -->
             <div class="col-md-4 d-flex flex-column align-items-center text-center vueling">
-                <div class="chef-icon"></div>
+                <div class="chef-icon" aria-hidden="true"></div>
                 <h5>CHEFS ESPECIALIZADOS</h5>
                 <p class="sourceSans textoAlergenos">Contamos con especialistas en todo tipo de alérgenos</p>
             </div>
 
             <!-- DUDAS -->
             <div class="col-md-4 d-flex flex-column align-items-center text-center vueling">
-                <div class="phone-icon"></div>
+                <div class="phone-icon" aria-hidden="true"></div>
                 <h5>¿DUDAS O INQUIETUDES?</h5>
                 <p class="sourceSans textoAlergenos">Puedes contactar con nosotros para cualquier duda</p>
             </div>
 
             <!-- ALÉRGENOS -->
             <div class="col-md-4 d-flex flex-column align-items-center text-center vueling">
-                <div class="certificado-icon"></div>
+                <div class="certificado-icon" aria-hidden="true"></div>
                 <h5>CERTIFICADOS DE ALÉRGENOS</h5>
                 <p class="sourceSans textoAlergenos">Estamos certificados para poder tratar todo tipo de alérgenos</p>
             </div>

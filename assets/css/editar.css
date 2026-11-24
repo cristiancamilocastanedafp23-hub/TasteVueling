@@ -80,6 +80,11 @@
     cursor: pointer;
 }
 
+/*Descripcion del plato*/
+.descripcionEditar{
+    color: #666666;
+}
+
 /*+ de color rosa en los ingredientes como extra */
 .masRosa{
     color: #FA4179;

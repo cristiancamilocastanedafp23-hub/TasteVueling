@@ -1,4 +1,6 @@
-//Funcion para ir cambiando el precio al añadir ingredientes extra
+// Funcion para ir cambiando el precio al añadir ingredientes extra
+
+
 function recalcularSubtotalProducto(cb, precioExtraSeleccionado){
     const boton = document.querySelector("#botonAnadir");
     textoBotonAnadir=boton.textContent;

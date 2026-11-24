@@ -8,7 +8,7 @@
                 
         <!-- 2 columnas: Logo y Copyright-->
         <div class="col-md-2 sourceSans text-center copyright">
-            <img src="assets/img/header/logoBlanco.webp" class="logo" alt="Logo del restaurante">
+            <img src="assets/img/header/logoBlanco.webp" class="logo" alt="Logo del restaurante con letras blancas">
             <p>© 2026 Vueling Airlines SA</p>
         </div>
 
@@ -41,10 +41,10 @@
         <div class="col-md-3 text-center text-md-start mt-2 mb-3">  
             <h6>SÍGUENOS</h6>
             <div class="d-flex gap-2 align-items-center justify-content-center justify-content-md-start">
-                <div class="x-icon"></div>
-                <div class="youtube-icon"></div>
-                <div class="instagram-icon"></div>
-                <div class="facebook-icon"></div>
+                <div class="x-icon" aria-hidden="true"></div>
+                <div class="youtube-icon" aria-hidden="true"></div>
+                <div class="instagram-icon" aria-hidden="true"></div>
+                <div class="facebook-icon" aria-hidden="true"></div>
             </div>
         </div>
 
@@ -63,8 +63,8 @@
             <h6>LLÉVANOS EN TU MÓVIL</h6>
 
             <div class="d-flex gap-1 justify-content-center">
-                <img src="assets/img/footer/google-play.webp" class="google-play" alt="Logo Google Play">
-                <img src="assets/img/footer/app-store.webp" class="app-store" alt="Logo Apple Store">
+                <img src="assets/img/footer/google-play.webp" class="google-play" alt="Descargar en Google Play">
+                <img src="assets/img/footer/app-store.webp" class="app-store" alt="Descargar en App Store">
             </div>
         </div>
 

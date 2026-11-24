@@ -46,7 +46,7 @@
 
         <!-- Mensaje si el registro es valido -->
         <?php if (isset($_SESSION['registro_valido'])): ?>
-            <div class="alert alert-success text-center sourceSanss" role="alert"> 
+            <div class="alert alert-success text-center sourceSans" role="alert"> 
                 <?= htmlspecialchars($_SESSION['registro_valido']) ?>
             </div>
             <?php unset($_SESSION['registro_valido']); ?>
