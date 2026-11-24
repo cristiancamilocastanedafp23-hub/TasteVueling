@@ -1,4 +1,4 @@
-//Funcion 
+//Funcion para ir cambiando el precio al añadir ingredientes extra
 function recalcularSubtotalProducto(cb, precioExtraSeleccionado){
     const boton = document.querySelector("#botonAnadir");
     textoBotonAnadir=boton.textContent;
@@ -8,11 +8,11 @@ function recalcularSubtotalProducto(cb, precioExtraSeleccionado){
     let suma=importeBoton;
     
     if (cb.checked) {
-       suma = precioExtraSeleccionado + importeBoton;
-      // sumo el importe del producto con extra chequeado
+      // Suma el importe del producto con extra chequeado
+      suma = precioExtraSeleccionado + importeBoton;
     } else {
-       suma= importeBoton - precioExtraSeleccionado;
-      // resto el importe del producto con extra chequeado
+      // Resta el importe del producto con extra chequeado
+     suma= importeBoton - precioExtraSeleccionado;
     }
     
     const sumaconComa =  suma.toFixed(2).replace(".", ",");

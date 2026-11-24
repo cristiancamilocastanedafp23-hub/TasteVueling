@@ -11,9 +11,15 @@
    TARJETAS DE LOS INGREDIENTES BASE
    Y ALÉRGENOS
 ===================================== */
+/*Tarjeta base*/
+.tarjetaBase{
+    border: 1px solid #128D1B ;
+    border-left: 12px solid #128D1B;
+    border-radius: 10px;
+}
 
 /*Tarjeta alérgenos*/
-.tarjetaBaseAlergenos{
+.tarjetaAlergenos{
     border: 1px solid #339CFF ;
     border-left: 12px solid #339CFF;
     border-radius: 10px;
@@ -21,7 +27,7 @@
 
 /*Icono información*/
 .info-icon{
-    background-image: url('/TasteVueling/assets/icons/editar/info.svg');
+    background-image: url('/TasteVueling/assets/icons/editarProducto/info.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -32,7 +38,7 @@
 
 /*Icono de alerta*/
 .alert-icon{
-    background-image: url('/TasteVueling/assets/icons/editar/alert.svg');
+    background-image: url('/TasteVueling/assets/icons/editarProducto/alert.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -74,10 +80,12 @@
     cursor: pointer;
 }
 
+/*+ de color rosa en los ingredientes como extra */
 .masRosa{
     color: #FA4179;
 }
 
+/*Precio extra*/
 .precioExtra {
     font-weight: bold;
 }
@@ -95,6 +103,7 @@
     cursor: pointer;
 }
 
+/*Al pasar encima con el ratón*/
 .botonAnadir:hover {
     background-color: #FFF66B;
 }

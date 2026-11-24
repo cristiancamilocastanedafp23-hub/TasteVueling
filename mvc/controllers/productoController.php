@@ -9,9 +9,6 @@ include_once("mvc/models/platos/PlatoDAO.php");
 // Incluimos el archivo DAO de los postres de la carta
 include_once("mvc/models/postres/PostreDAO.php");
 
-// Incluimos el archivo DAO de los bebidas de la carta
-include_once("mvc/models/bebidas/BebidaDAO.php");
-
 // Incluimos el archivo DAO de los ingredientes de los productos
 include_once("mvc/models/ingredientes/Ingrediente_ProductoDAO.php");
 
@@ -78,17 +75,17 @@ class productoController
         $marcados = [];
 
         // Abrimos el form, donde nos llegaran los ingredientes enviados
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // El usuario ha enviado el formulario: cogemos lo que ha marcado
             $enviados = $_POST['ingredientes'] ?? [];
 
-            // Solo aceptamos ids que realmente pertenecen a este producto
+            // Bucle para recorrer los ingredientes del producto
             foreach ($ingredientes as $ingrediente) {
+                // Los base siempre vanm, el resto solo si el usuario lo ha marcado
                 if ($ingrediente->getTipo() === 'base' || in_array($ingrediente->getIngredienteId(), $enviados)) {
                     $marcados[] = $ingrediente->getIngredienteId();
                 }
             }
-
         } else {
             // Primera vez: base e incluidos marcados, extras sin marcar
             foreach ($ingredientes as $ingrediente) {
@@ -100,9 +97,9 @@ class productoController
 
         // Precio total: precio del producto + extras marcados
         $precioTotal = (float) $producto->getPrecio();
-        foreach ($ingredientes as $ing) {
-            if ($ing->getTipo() === 'extra' && in_array($ing->getIngredienteId(), $marcados)) {
-                $precioTotal += (float) $ing->getPrecioExtra();
+        foreach ($ingredientes as $ingrediente) {
+            if ($ingrediente->getTipo() === 'extra' && in_array($ingrediente->getIngredienteId(), $marcados)) {
+                $precioTotal += (float) $ingrediente->getPrecioExtra();
             }
         }
 
