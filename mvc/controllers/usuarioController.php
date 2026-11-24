@@ -70,5 +70,18 @@ class usuarioController
         exit;
     }
 
+    // Funcion para cerrar sesión
+    public function logout()
+    {
+        // Vaciamos la sesión
+        $_SESSION = [];
+        
+        // Destruimos los datos de la sesión en el servidor
+        session_destroy();
+
+        // Redirigimos al inicio
+        header("Location:" . url);
+        exit;
+    }
     
 }
