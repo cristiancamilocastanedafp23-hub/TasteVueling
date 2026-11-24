@@ -160,3 +160,31 @@ Como es solo para una animacion que no afecta al proyecto en magnitud la he usad
 .menu-home.scrolled .navbar-toggler-icon {
     filter: none;
 }
+
+.navbar .dropdown-item.cerrar-sesion,
+.navbar .nav-link.cerrar-sesion {
+    color: #dc3545;
+}
+
+.menu-home .nav-link.cerrar-sesion,
+.menu-home.scrolled .nav-link.cerrar-sesion {
+    color: #dc3545 !important;
+}
+
+.navbar .usuario-nombre,
+.navbar .usuario-nombre:hover,
+.navbar .usuario-nombre:focus {
+    color: #000000;
+}
+
+.menu-home .usuario-nombre,
+.menu-home .usuario-nombre:hover,
+.menu-home .usuario-nombre:focus {
+    color: #ffffff;
+}
+
+.menu-home.scrolled .usuario-nombre,
+.menu-home.scrolled .usuario-nombre:hover,
+.menu-home.scrolled .usuario-nombre:focus {
+    color: #000000;
+}

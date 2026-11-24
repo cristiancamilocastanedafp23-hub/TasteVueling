@@ -44,15 +44,41 @@
             
         </div>
 
-        <!-- 2 columnas vacias y 1 columna: Usuario y Carrito -->
-        <div class="col-md-1 offset-md-2 d-flex gap-3">  
+        <!-- 1 columnas vacia y 2 columnas: Usuario y Carrito -->
+        <div class="col-md-2 offset-md-1 d-flex gap-3">
+            <!-- Condicional para detectar que hay sesión -->
+            <?php if (isset($_SESSION['usuario'])): ?>
 
-            <!-- User-->
-            <div class="user-icon" role="button" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel"></div> 
-            <!--Carrito  --> 
+                <!-- Usuario con sesion iniciada -->
+                <div class="dropdown">
+                    <!-- Nombre del usuario que tenga sesión iniciada -->
+                    <a href="#" class="dropdown-toggle usuario-nombre text-decoration-none text-nowrap vueling" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?= htmlspecialchars($_SESSION['usuario']['nombre']) ?>
+                    </a>
+
+                    <!-- Menú desplegable -->
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <!-- Panel de administración -->
+                        <li>
+                            <a class="dropdown-item sourceSansPro" href="<?= url ?>?controller=usuario&action=panel">Mi panel</a>
+                        </li>
+                        <!-- Cerrar sesión -->
+                        <li>
+                            <a class="dropdown-item cerrar-sesion sourceSansPro" href="<?= url ?>?controller=usuario&action=logout">Cerrar sesión</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            <?php else: ?>
+                <!-- Usuario sin sesión iniciada -->
+                <div class="user-icon" role="button" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel"></div>
+            <?php endif; ?>
+
+            <!-- Carrito -->
             <div class="carrito-icon"></div>
-            
-        </div>
+        </div>  
 
     </div>
 
@@ -86,10 +112,27 @@
         <!-- Navegación -->
         <ul class="navbar-nav vueling py-3">
             
-            <!-- Iniciar sesión -->
-            <li class="nav-item">
-                <a href="#" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel">INICIAR SESIÓN</a>
-            </li>
+            <!-- Condicional que detecta si hay sesión iniciada -->
+            <?php if (isset($_SESSION['usuario'])): ?>
+
+                <!-- Panel de usuario -->
+                <li class="nav-item">
+                    <a href="<?= url ?>?controller=usuario&action=panel" class="nav-link text-dark">MI PANEL</a>                    
+                </li>
+
+                <!-- Cerrar sesión -->
+                <li class="nav-item">
+                    <a href="<?= url ?>?controller=usuario&action=logout" class="nav-link cerrar-sesion">CERRAR SESIÓN</a>
+                </li>
+
+            <?php else: ?>
+
+                <!-- Iniciar sesión -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel">INICIAR SESIÓN</a>
+                </li>
+                
+            <?php endif; ?>
 
             <!-- Inicio -->
             <li class="nav-item">
