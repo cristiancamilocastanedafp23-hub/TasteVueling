@@ -41,6 +41,9 @@
     <!-- JavaScript del fallo del header --> 
     <script src="assets/js/panelLoginRegister.js"></script>
 
+    <!-- JavaScript para cambiar el precio al añadir  --> 
+    <script src="assets/js/editarProducto.js"></script>
+
 </head>
 <body>
 
