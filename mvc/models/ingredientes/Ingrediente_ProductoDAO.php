@@ -17,7 +17,7 @@ class Ingrediente_ProductoDAO {
 
         // Definimos consulta
         $consulta = "SELECT pi.producto_id, pi.ingrediente_id, pi.tipo, pi.cantidad,
-                            i.nombre, i.precio_extra, i.alergenos
+                            i.nombre, i.precio_extra
                             FROM producto_ingrediente pi
                             INNER JOIN ingredientes i ON pi.ingrediente_id = i.id
                             WHERE pi.producto_id = ? 
