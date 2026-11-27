@@ -1,3 +1,29 @@
+/*MARGEN SOLO ABAJO*/
+.margenAbajo {
+    margin-bottom: 72px;
+}
+
+/* =====================================
+   MIGAS DE PAN
+===================================== */
+
+/* Elementos de las migas */
+.breadcrumb-item a {
+    color: #037A92;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Que se subraye al pasar por encima */
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* El plato que esté activo salga en negro */
+.breadcrumb-item.active {
+    color: #000000;
+}
+
 /* =====================================
    IMAGEN
 ===================================== */
@@ -53,6 +79,36 @@
     margin-left: 45px;
     font-size: 14px;
     font-weight: bold;
+}
+
+/*Tamaño de los iconos de los alergenos*/
+.iconosAlergenos {
+    width: 24px;
+    height: 24px;
+}
+
+/* =====================================
+    PUNTOS
+===================================== */
+.tarjetaPuntos{
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.textoAmarillo{
+    color: #FFF000;
+}
+
+/*Icono moneda*/
+.moneda-icon{
+    background-image: url('/TasteVueling/assets/icons/editarProducto/monedas.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
 }
 
 /* =====================================
@@ -111,4 +167,16 @@
 /*Al pasar encima con el ratón*/
 .botonAnadir:hover {
     background-color: #FFF66B;
+}
+
+/* =====================================
+   RESPONSIVE - MÓVIL
+===================================== */
+
+@media (max-width: 575.98px) {
+
+    /*Margen de la tarjeta de alergenos con el titulo de abajo*/
+    .tarjetaAlergenos{
+        margin-bottom: 40px;
+    }
 }

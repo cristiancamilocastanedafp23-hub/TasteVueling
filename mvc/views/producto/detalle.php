@@ -1,7 +1,33 @@
 <!-- VISTA DETALLE DEL PRODUCTO -->
-<div class="contenedor margen">
+<div class="contenedor margenAbajo">
+
+    <!-- MIGAS DE PAN -->
+    <nav aria-label="breadcrumb" class="mt-5">
+        <ol class="breadcrumb vueling">
+
+            <!-- Carta -->
+            <li class="breadcrumb-item">
+                <a href="<?= url ?>?controller=carta">
+                    Carta
+                </a>
+            </li>
+
+            <!-- Continente -->
+            <li class="breadcrumb-item">
+                <a href="<?= url ?>?controller=carta&continente=<?= $nombreCategoria ?>">
+                    <?= htmlspecialchars(mb_convert_case($nombreCategoria, MB_CASE_TITLE, "UTF-8"), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?>                
+                </a>
+            </li>
+
+            <!-- Producto actual -->
+            <li class="breadcrumb-item active" aria-current="page">
+                <?= htmlspecialchars(ucwords(strtolower($producto->getNombre()))) ?>
+            </li>
+
+        </ol>
+    </nav>
     
-    <div class="row gx-5">
+    <div class="row gx-5 mt-4">
         <!-- ================= COLUMNA IZQUIERDA ================= -->
         <div class="col-12 col-lg-6">
 
@@ -27,7 +53,7 @@
 
                 <!-- Base -->
                 <div class="d-flex gap-2 mt-3 ms-3 sourceSans">
-                    <div class="info-icon"></div>
+                    <div class="info-icon" aria-hidden="true"></div>
                     <p class="fw-bold">Ingredientes base</p>
                 </div>
 
@@ -40,15 +66,27 @@
             <!-- Alérgenos -->
             <div class="mt-3 tarjetaAlergenos">
 
-                <!-- Base -->
+                <!-- Iconos y nombre -->
                 <div class="d-flex gap-2 mt-3 ms-3 sourceSans">
-                    <div class="alert-icon"></div>
+                    <div class="alert-icon" aria-hidden="true"></div>
                     <p class="fw-bold">Alérgenos que puede contener</p>
                 </div>
 
-                <p class="sourceSans textoBase">
-                    <?= implode(' · ', array_map('htmlspecialchars', $alergenos)) ?>
-                </p>
+                <!-- Iconos y su nombre -->
+                <?php if (!empty($alergenos)): ?>
+                    <div class="d-flex gap-3 pb-3 sourceSans textoBase">
+                        <?php foreach ($alergenos as $alergeno): ?>
+                            <div class="d-flex align-items-center gap-1 ">
+                                <img  src="assets/icons/alergenos/<?= htmlspecialchars($alergeno->getIcono()) ?>"
+                                    alt="<?= htmlspecialchars($alergeno->getNombre()) ?>"
+                                    class="iconosAlergenos">
+                                <span><?= htmlspecialchars($alergeno->getNombre()) ?></span>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else: ?>
+                    <p class="sourceSans textoBase">Sin alérgenos declarados.</p>
+                <?php endif; ?>
 
             </div>
 
@@ -57,10 +95,27 @@
         <!-- ================= COLUMNA DERECHA ================= -->
         <div class="col-12 col-lg-6">
             
-            <!-- Personaliza -->
-            <h2 class="vueling">
-                PERSONALIZA TU VIAJE POR <?= htmlspecialchars($nombreCategoria) ?>
-            </h2>
+            <!-- Titulo y puntos -->
+            <div class="d-flex gap-1">
+                <!-- Personaliza -->
+                <h2 class="vueling">
+                    PERSONALIZA TU VIAJE POR <?= htmlspecialchars($nombreCategoria) ?>
+                </h2>
+                
+                <!-- Puntos que obtienen el usuario -->
+                <div class="d-flex flex-column tarjetaPuntos sourceSans">
+
+                    <!-- Icono y cantidad de puntos ganados -->
+                    <div class="d-flex gap-2 mb-2">
+                        <div class="moneda-icon"></div>
+                        <span id="puntosObtenidos" class="textoAmarillo"> + <?= htmlspecialchars($puntosObtenidos) ?> PUNTOS OBTENIDOS </span>
+                    </div>
+                    
+                    <!-- Texto -->
+                    <p class="text-white">¡SIGUE SUMANDO PUNTOS PARA OBTENER MEJORES RECOMPENSAS!</p>
+                </div>
+                
+            </div>
 
             <!-- Formulario -->
             <form method="POST" action="<?= url ?>?controller=producto&action=detalle&id=<?= $producto->getId() ?>&tipo=<?= $producto->getTipoId() ?>">
@@ -91,7 +146,7 @@
                             <?php if ($ingrediente->getTipo() === 'extra'): ?>
 
                                 <span class="precioExtra"> 
-                                    <span class="masRosa">+</span>
+                                    <span class="masRosa" aria-hidden="true">+</span>
                                     <?= number_format((float)$ingrediente->getPrecioExtra(), 2, ',', '.') ?> €
                                 </span>
 

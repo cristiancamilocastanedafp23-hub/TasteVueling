@@ -12,6 +12,12 @@ include_once("mvc/models/postres/PostreDAO.php");
 // Incluimos el archivo DAO de los ingredientes de los productos
 include_once("mvc/models/ingredientes/Ingrediente_ProductoDAO.php");
 
+// Incluimos el archivo DAO de los ingredientes de los productos
+include_once("mvc/models/ingredientes/AlergenoDAO.php");
+
+// Incluimos el archivo DAO de los puntos 
+include_once("mvc/models/ofertas/puntos/Puntos.php");
+
 // Creamos la clase controller de producto
 class productoController
 {
@@ -49,9 +55,8 @@ class productoController
         // Obtenemos los ingredientes del producto (base, incluido y extra)
         $ingredientes = Ingrediente_ProductoDAO::getIngredientesProductoById($id);
 
-        // Listas vacias para recoger ingredientes y alérgenos
+        // Lista vacía para recoger los ingredientes base
         $ingredientesBase = [];
-        $alergenos = [];
 
         // Bucle para recorrer los ingredientes
         foreach ($ingredientes as $ingrediente) {
@@ -59,17 +64,10 @@ class productoController
             if ($ingrediente->getTipo() === "base") {
                 $ingredientesBase[] = $ingrediente->getNombre();
             }
-
-            // Separamos "Gluten, Lactosa" en elementos sueltos y los añadimos
-            if (!empty($ingrediente->getAlergenos())) {
-                foreach (explode(",", $ingrediente->getAlergenos()) as $alergeno) {
-                    $alergenos[] = trim($alergeno);
-                }
-            }
         }
 
-        // Quitamos los repetidos
-        $alergenos = array_unique($alergenos);
+        // Obtenemos los alérgenos asociados al producto
+        $alergenos = AlergenoDAO::getAlergenosByProductoId($id);
 
         // Hacemos una lista de los ingredientes marcados
         $marcados = [];
@@ -102,6 +100,9 @@ class productoController
                 $precioTotal += (float) $ingrediente->getPrecioExtra();
             }
         }
+
+        // Obtenemos los puntos que gana el usuario
+        $puntosObtenidos = Puntos::puntosObtener($precioTotal);
 
         // Botón "Añadir al carrito"
         if (isset($_POST['accion']) && $_POST['accion'] === 'anadir') {

@@ -1,6 +1,5 @@
 <?php 
-// Creamos la clase categoria, pero en este caso no es
-// abstract ya que ninguna clase más heredará
+// Creamos la clase Ingrediente_Producto
 class Ingrediente_Producto {
 
     // Los nombres deben coincidir con las columnas de la tabla (producto_ingrediente)
@@ -9,10 +8,9 @@ class Ingrediente_Producto {
     protected $tipo;
     protected $cantidad;
 
-    // Para realizar el join y sacar estas dos atributos
+    // Para realizar el join con ingredientes y sacar estos dos atributos
     protected $nombre;
     protected $precio_extra;
-    protected $alergenos;
 
     /*
     - fetch_object() rellena las propiedades ANTES de llamar al constructor.
@@ -36,7 +34,7 @@ class Ingrediente_Producto {
         }
     }
 
-    /*Producto Id*/
+    /* Producto Id */
     public function getProductoId()
     {
         return $this->producto_id;
@@ -48,7 +46,7 @@ class Ingrediente_Producto {
         return $this;
     }
 
-    /*Ingrediente Id*/
+    /* Ingrediente Id */
     public function getIngredienteId()
     {
         return $this->ingrediente_id;
@@ -60,7 +58,7 @@ class Ingrediente_Producto {
         return $this;
     }
 
-    /*Tipo*/
+    /* Tipo */
     public function getTipo()
     {
         return $this->tipo;
@@ -72,7 +70,7 @@ class Ingrediente_Producto {
         return $this;
     }
 
-    /*Cantidad*/
+    /* Cantidad */
     public function getCantidad()
     {
         return $this->cantidad;
@@ -84,21 +82,15 @@ class Ingrediente_Producto {
         return $this;
     }
 
-    /*Nombre*/
+    /* Nombre */
     public function getNombre()
     {
         return $this->nombre;
     }
 
-    /*Precio extra*/
+    /* Precio extra */
     public function getPrecioExtra()
     {
         return $this->precio_extra;
-    }
-
-    /*Alergenos*/
-    public function getAlergenos()
-    {
-        return $this->alergenos;
     }
 }

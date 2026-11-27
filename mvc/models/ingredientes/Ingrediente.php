@@ -1,13 +1,11 @@
 <?php 
-// Creamos la clase categoria, pero en este caso no es
-// abstract ya que ninguna clase más heredará
+// Creamos la clase Ingrediente
 class Ingrediente {
 
     // Los nombres deben coincidir con las columnas de la tabla (ingredientes)
     protected $id;
     protected $nombre;
     protected $precio_extra;
-    protected $alergenos;
     protected $activo;
 
     /*
@@ -16,7 +14,7 @@ class Ingrediente {
     */
 
     /* Constructor */
-    public function __construct($id = null, $nombre = null, $precio_extra = null, $alergenos = null, $activo = null)
+    public function __construct($id = null, $nombre = null, $precio_extra = null, $activo = null)
     {
         if ($id !== null) {
             $this->id = $id;
@@ -27,15 +25,12 @@ class Ingrediente {
         if ($precio_extra !== null) {
             $this->precio_extra = $precio_extra;
         }
-        if ($alergenos !== null) {
-            $this->alergenos = $alergenos;
-        }
         if ($activo !== null) {
             $this->activo = $activo;
         }
     }
 
-    /*Id*/
+    /* Id */
     public function getId()
     {
         return $this->id;
@@ -47,7 +42,7 @@ class Ingrediente {
         return $this;
     }
 
-    /*Nombre*/
+    /* Nombre */
     public function getNombre()
     {
         return $this->nombre;
@@ -59,7 +54,7 @@ class Ingrediente {
         return $this;
     }
 
-    /*Precio Extra*/
+    /* Precio Extra */
     public function getPrecioExtra()
     {
         return $this->precio_extra;
@@ -71,19 +66,7 @@ class Ingrediente {
         return $this;
     }
 
-    /*Precio Extra*/
-    public function getAlergenos()
-    {
-        return $this->alergenos;
-    }
-
-    public function setAlergenos($alergenos)
-    {
-        $this->alergenos = $alergenos;
-        return $this;
-    }
-
-    /*Activo*/
+    /* Activo */
     public function getActivo()
     {
         return $this->activo;
