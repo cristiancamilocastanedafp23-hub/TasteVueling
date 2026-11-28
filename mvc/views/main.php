@@ -27,13 +27,16 @@
     <link rel="stylesheet" href="assets/css/home.css">
 
     <!-- CSS de la Carta -->
-    <link rel="stylesheet" href="assets/css/carta.css">
+    <link rel="stylesheet" href="assets/css/carta.css?version=1.0">
 
     <!-- CSS de editar -->
     <link rel="stylesheet" href="assets/css/editar.css">
 
     <!-- CSS del Footer -->
     <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- CSS del error -->
+    <link rel="stylesheet" href="assets/css/error.css">
 
     <!-- JavaScript del scroll del header -->
     <script src="assets/js/header.js"></script>

@@ -108,11 +108,11 @@
                     <!-- Icono y cantidad de puntos ganados -->
                     <div class="d-flex gap-2 mb-2">
                         <div class="moneda-icon"></div>
-                        <span id="puntosObtenidos" class="textoAmarillo"> + <?= htmlspecialchars($puntosObtenidos) ?> PUNTOS OBTENIDOS </span>
+                        <span id="puntosObtenidos" class="textoAmarillo fw-bold"> + <?= htmlspecialchars($puntosObtenidos) ?> PUNTOS OBTENIDOS </span>
                     </div>
                     
                     <!-- Texto -->
-                    <p class="text-white">¡SIGUE SUMANDO PUNTOS PARA OBTENER MEJORES RECOMPENSAS!</p>
+                    <p class="text-white fw-bold">¡SIGUE SUMANDO PUNTOS PARA OBTENER MEJORES RECOMPENSAS!</p>
                 </div>
                 
             </div>

@@ -24,13 +24,6 @@ class productoController
     // Muestra la página de edición de un plato o postre
     public function detalle()
     {
-        // Validamos que el id y el tipo lleguen bien por la URL
-        // y sino redirigimos a la carta
-        if (!isset($_GET['id']) || !ctype_digit($_GET['id']) || !isset($_GET['tipo'])) {
-            header("Location: " . url . "?controller=carta");
-            exit;
-        }
-
         // Convertimos el id y el tipo en enteros
         $id = (int) $_GET['id'];
         $tipo = (int) $_GET['tipo'];
